@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин-Mishka</title>
+  <title>Вязяние на заказ</title>
 </head>
 
 <body>
 
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="" src="../source/img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
+      <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
     </a>
-    <button class="button button--page-header-menu js-header-menu-btn">
+    <button class="btn btn--hamburger js-hamburger-btn">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <div class="nav-menu-modal-wrapper js-nav-menu">
-      <button class="button button--menu-close js-btn-menu-close"></button>
-      <nav class="nav-menu-modal">
-        <ul class="nav-menu-modal__list nav-list">
+    <div class="navigation">
+      <button class="btn btn--close js-close-btn"></button>
+      <nav class="navigation__menu">
+        <ul class="navigation__menu-list nav-list">
           <li class="nav-list__item">
             <a href="catalog.html">
               Каталог товаров
@@ -33,13 +33,12 @@
           <li class="nav-list__item">
             <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
               <label class="menu-search">
-                <input type="search">
-                Поиск по сайту
+                <input type="search" placeholder="Поиск по сайту">
               </label>
             </form>
           </li>
           <li class="nav-list__item">
-            <a href="catalog.html">
+            <a href="#">
               Корзина: пока пуста
             </a>
           </li>
@@ -47,7 +46,7 @@
       </nav>
     </div>
   </header>
-  
+
   <main>
 
   </main>
@@ -55,21 +54,23 @@
   <footer class="page-footer">
     <ul class="page-footer__list social-list">
       <li class="social-list__item">
-        <img src="#" alt="Мы в Инстаграме">
+        <a href="#"><img src="#" alt="Мы в Инстаграме" width="10" height="10"></a>
       </li>
       <li class="social-list__item">
-        <img src="#" alt="Мы в Фейсбуке">
+        <a href="#"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
       </li>
       <li class="social-list__item">
-        <img src="#" alt="Мы в Твиттере">
+        <a href="#"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
       </li>
     </ul>
-    <span class="page-footer__autor">
-      Разработано
-    </span>
-    <a class="page-footer__autor-link" href="https://htmlacademy.ru/intensive/adaptive">
-      <img src="../source/img/svg/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
-    </a>
+    <div class="page-footer__wrapper">
+      <span class="page-footer__autor">
+        Разработано
+      </span>
+      <a class="page-footer__autor-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="img/svg/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
+      </a>
+    </div>
   </footer>
 
 </body>
