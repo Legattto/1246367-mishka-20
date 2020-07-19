@@ -32,7 +32,7 @@
           </li>
           <li class="nav-list__item">
             <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="menu-search">
+              <label class="menu-search" aria-label="Окно поиска">
                 <input type="search" placeholder="Поиск по сайту">
               </label>
             </form>
@@ -84,33 +84,33 @@
         Экологически чистая пряжа, ручная работа. Доступны в шести
         расцветках, и трех размерах.
       </p>
-      <dl class="week-goods__list">
-        <div class="week-goods__list-item">
-          <dt class="week-goods__parameter">
+      <table class="week-goods__table">
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
             Цвет:
-          </dt>
-          <dd class="week-goods__description">
+          </td>
+          <td class="week-goods__table-col">
             &laquo;Тиффани&raquo;/серый
-          </dd>
-        </div>
-        <div class="week-goods__list-item">
-          <dt class="week-goods__parameter">
+          </td>
+        </tr>
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
             Диаметр:
-          </dt>
-          <dd class="week-goods__description">
+          </td>
+          <td class="week-goods__table-col">
             25 см
-          </dd>
-        </div>
-        <div class="week-goods__list-item">
-          <dt class="week-goods__parameter">
+          </td>
+        </tr>
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
             Высота:
-          </dt>
-          <dd class="week-goods__description">
+          </td>
+          <td class="week-goods__table-col">
             15 см
-          </dd>
-        </div>
-      </dl>
-      <img src="https://via.placeholder.com/150x150" alt="Вязанные корзинки">
+          </td>
+        </tr>
+      </table>
+      <img src="https://via.placeholder.com/150x150" alt="Вязанные корзинки" width="260" height="315">
       <span class="week-goods__prise">
         Цена: 990 руб.
       </span>
@@ -143,33 +143,70 @@
           Поставляется в подарочной упаковке
         </li>
       </ul>
+      <div class="shop-info__reviews">
+        <span class="heading">
+          Отзывы
+        </span>
+        <p class="shop-info__reviews-comment">
+          Я молодая мама, но все равно
+          фотографии не набирали и близко
+          такого количества лайков, как у
+          популярных инстамамочек. В
+          отчаянии, я накупила аксесуаров
+          и игрушек в Мишке, и мои
+          фотографии сразу стали более
+          стильными, а так же набирают
+          больше лайков!
+        </p>
+        <span class="shop-info__reviews-name">
+          Анастасия Красильникова
+        </span>
+        <a class="shop-info__reviews-email" href="#">
+          @misssssiskras
+        </a>
+        <button class="btn btn--arrow-left"></button>
+        <button class="btn btn--arrow-right"></button>
+        <a class="btn btn--main" href="#">
+          Написать
+        </a>
+      </div>
     </section>
 
-    <section class="reviews">
-      <h2 class="heading">
-        Отзывы
+    <section class="contacts">
+      <h2 class="visually-hidden">
+        Контактная информация
       </h2>
-      <p class="reviews__comment">
-        Я молодая мама, но все равно
-        фотографии не набирали и близко
-        такого количества лайков, как у
-        популярных инстамамочек. В
-        отчаянии, я накупила аксесуаров
-        и игрушек в Мишке, и мои
-        фотографии сразу стали более
-        стильными, а так же набирают
-        больше лайков!
-      </p>
-      <span class="reviews__comment-name">
-        Анастасия Красильникова
+      <span class="heading heading--small">
+        Контакты
       </span>
-      <a class="reviews__comment-email" href="#">
-        @misssssiskras
-      </a>
-      <button class="btn btn--arrow-left"></button>
-      <button class="btn btn--arrow-right"></button>
-      <a class="btn btn--main" href="#">
-        Написать
+      <table class="contacts__table">
+        <tr class="contacts__table-row">
+          <td class="contacts__table-col">
+            e-mail:
+          </td>
+          <td class="contacts__table-col">
+            <a href="#">
+              info@mimimishkashop.ru
+            </a>
+          </td>
+        </tr>
+        <tr class="contacts__table-row">
+          <td class="contacts__table-col">
+            адрес:
+          </td>
+          <td class="contacts__table-col">
+            <address>
+              г. Санкт-Петербург,
+              ул. Большая
+              Конюшенная,
+              д. 19/8, офис 101
+            </address>
+          </td>
+        </tr>
+      </table>
+      <img src="#" alt="Мы на карте" width="322" height="457">
+      <a class="btn btn--main">
+        Напишите нам
       </a>
     </section>
 

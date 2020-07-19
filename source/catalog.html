@@ -32,7 +32,7 @@
           </li>
           <li class="nav-list__item">
             <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="menu-search">
+              <label class="menu-search" aria-label="Окно поиска">
                 <input type="search" placeholder="Поиск по сайту">
               </label>
             </form>
@@ -48,8 +48,9 @@
   </header>
 
   <main class="catalog-main">
+
     <section class="catalog-main__catalog">
-      <h2 class="catalog-main__catalog-heading">
+      <h2 class="heading heading--big">
         Каталог товаров
       </h2>
       <ul class="catalog-main__catalog-list catalog-list">
@@ -100,6 +101,28 @@
         </li>
       </ul>
     </section>
+
+    <section class="video">
+      <h2 class="visually-hidden">
+        Производственный процесс
+      </h2>
+      <span class="video__heading">
+        Процесс производства
+      </span>
+      <video class="video__play-video" controls="controls" width="260" height="150">
+        <source src="#">
+      </video>
+      <p class="video__text">
+        По просьбам наших любимых
+        фоловеров мы сняли для вас
+        подробное видио о том, как
+        появляются наши товары.
+      </p>
+      <a href="#" class="btn btn--main btn--small">
+        Сделать заказ
+      </a>
+    </section>
+
   </main>
 
   <footer class="page-footer">

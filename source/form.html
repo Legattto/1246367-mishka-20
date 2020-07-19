@@ -32,7 +32,7 @@
           </li>
           <li class="nav-list__item">
             <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="menu-search">
+              <label class="menu-search" aria-label="Окно поиска">
                 <input type="search" placeholder="Поиск по сайту">
               </label>
             </form>
@@ -47,8 +47,131 @@
     </div>
   </header>
 
-  <main>
-
+  <main class="page-form">
+    <div class="heading-wrapper">
+      <h1 class="heading">
+        Вязание на заказ
+      </h1>
+    </div>
+    <p class="page-form__text">
+      Мы будем рады воплотить в жизнь
+      ваши пожилания! Заполните простую
+      форму заказа и мы свяжемся с вами,
+      чтобы уточнить детали
+    </p>
+    <section class="page-form__order">
+      <h2 class="visually-hidden">
+        Форма для заказа
+      </h2>
+      <form class="page-form__order-send form-order" action="https://echo.htmlacademy.ru" method="POST">
+        <span class="form-order__options">
+          Тип
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="radio" name="Тип" value="Акксесуар для интрьера" checked>
+              Акксесуар для интрьера
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="radio" name="Тип" value="Детская игрушка">
+              Детская игрушка
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          Цвет
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Белый" checked>
+              Белый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Серый" checked>
+              Серый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="&laquo;Тиффани&raquo;">
+              &laquo;Тиффани&raquo;
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Черный">
+              Черный
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Розовый">
+              Розовый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Оранжевый">
+              Оранжевый
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          ФИО
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              Имя:
+              <input type="text" name="Имя" placeholder="Введите ваше имя*" required>
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              Фамилия:
+              <input type="text" name="Фамилия" placeholder="Укажите фамилию*" required>
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              Отчество:
+              <input type="text" name="Отчество" placeholder="Отчество, если желаете">
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          Тел
+        </span>
+        <label class="form-order__label">
+          <input type="tel" name="Телефон" required pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
+            placeholder="+7 XXX XXX XX XX*">
+        </label>
+        <span class="form-order__options">
+          E-MAIL
+        </span>
+        <label class="form-order__label">
+          <input type="email" name="e-mail" required placeholder="Ваш Email*">
+        </label>
+        <span class="form-order__options">
+          Доп
+        </span>
+        <label class="form-order__label">
+          <textarea placeholder="Опишите все ваши пожилания к заказу"></textarea>
+        </label>
+        <span class="form-order__addition">
+          *Поля обязательные для заполнения
+        </span>
+        <button class="btn btn--main" type="submit">
+          Отправить заказ
+        </button>
+      </form>
+    </section>
   </main>
 
   <footer class="page-footer">
