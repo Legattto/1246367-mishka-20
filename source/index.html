@@ -10,7 +10,7 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" aria-label="Логотип компании Mishka">
       <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
     </a>
     <button class="btn btn--hamburger js-hamburger-btn">
@@ -21,12 +21,12 @@
       <nav class="navigation__menu">
         <ul class="navigation__menu-list nav-list">
           <li class="nav-list__item">
-            <a href="catalog.html">
+            <a href="catalog.html" aria-label="Переход в каталог товаров">
               Каталог товаров
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="form.html">
+            <a href="form.html" aria-label="Переход на форму заказа">
               Вязяние на заказ
             </a>
           </li>
@@ -38,7 +38,7 @@
             </form>
           </li>
           <li class="nav-list__item">
-            <a href="#">
+            <a href="#" aria-label="Переход в корзину">
               Корзина: пока пуста
             </a>
           </li>
@@ -61,12 +61,12 @@
       </p>
       <ul class="services__list ">
         <li class="services__list-item">
-          <a href="catalog.html">
+          <a href="catalog.html" aria-label="Переход на страницу каталога">
             Предметы интерьера
           </a>
         </li>
         <li class="services__list-item">
-          <a href="catalog.html">
+          <a href="catalog.html" aria-label="Переход на страницу каталога">
             Детские игрушки
           </a>
         </li>
@@ -143,33 +143,40 @@
           Поставляется в подарочной упаковке
         </li>
       </ul>
-      <div class="shop-info__reviews">
+      <section class="shop-info__reviews">
+        <h2 class="visually-hidden">
+          Отзывы о нашей компании
+        </h2>
         <span class="heading">
           Отзывы
         </span>
-        <p class="shop-info__reviews-comment">
-          Я молодая мама, но все равно
-          фотографии не набирали и близко
-          такого количества лайков, как у
-          популярных инстамамочек. В
-          отчаянии, я накупила аксесуаров
-          и игрушек в Мишке, и мои
-          фотографии сразу стали более
-          стильными, а так же набирают
-          больше лайков!
-        </p>
-        <span class="shop-info__reviews-name">
-          Анастасия Красильникова
-        </span>
-        <a class="shop-info__reviews-email" href="#">
-          @misssssiskras
-        </a>
+        <ul class="shop-info__reviews-slider">
+          <li class="shop-info__reviews-slideritem">
+            <p class="shop-info__reviews-comment">
+              Я молодая мама, но все равно
+              фотографии не набирали и близко
+              такого количества лайков, как у
+              популярных инстамамочек. В
+              отчаянии, я накупила аксесуаров
+              и игрушек в Мишке, и мои
+              фотографии сразу стали более
+              стильными, а так же набирают
+              больше лайков!
+            </p>
+            <span class="shop-info__reviews-name">
+              Анастасия Красильникова
+            </span>
+            <a href="#" class="shop-info__reviews-email" aria-label="Email пользователя">
+              @misssssiskras
+            </a>
+          </li>
+        </ul>
         <button class="btn btn--arrow-left"></button>
         <button class="btn btn--arrow-right"></button>
-        <a class="btn btn--main" href="#">
+        <a href="#" class="btn btn--main" aria-label="Написать отзыв">
           Написать
         </a>
-      </div>
+      </section>
     </section>
 
     <section class="contacts">
@@ -185,7 +192,7 @@
             e-mail:
           </td>
           <td class="contacts__table-col">
-            <a href="#">
+            <a href="mailto:info@mimimishkashop.ru" aria-label="Наша почта">
               info@mimimishkashop.ru
             </a>
           </td>
@@ -205,7 +212,7 @@
         </tr>
       </table>
       <img src="#" alt="Мы на карте" width="322" height="457">
-      <a class="btn btn--main">
+      <a class="btn btn--main" aria-label="Напишите нам">
         Напишите нам
       </a>
     </section>
@@ -215,20 +222,22 @@
   <footer class="page-footer">
     <ul class="page-footer__list social-list">
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Инстаграме" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Инстаграме"><img src="#" alt="Мы в Инстаграме" width="10"
+            height="10"></a>
       </li>
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Фейсбуке"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
       </li>
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Твитере"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
       </li>
     </ul>
     <div class="page-footer__wrapper">
       <span class="page-footer__autor">
         Разработано
       </span>
-      <a class="page-footer__autor-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        aria-label="Логотип HTML academy">
         <img src="img/svg/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
       </a>
     </div>
