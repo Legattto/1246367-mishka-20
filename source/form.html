@@ -10,7 +10,7 @@
 <body>
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a href="index.html" class="page-header__logo" aria-label="Логотип компании Mishka">
       <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
     </a>
     <button class="btn btn--hamburger js-hamburger-btn">
@@ -21,24 +21,24 @@
       <nav class="navigation__menu">
         <ul class="navigation__menu-list nav-list">
           <li class="nav-list__item">
-            <a href="catalog.html">
+            <a href="catalog.html" aria-label="Переход в каталог товаров">
               Каталог товаров
             </a>
           </li>
           <li class="nav-list__item">
-            <a href="form.html">
+            <a href="form.html" aria-label="Переход на форму заказа">
               Вязяние на заказ
             </a>
           </li>
           <li class="nav-list__item">
             <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="menu-search">
+              <label class="menu-search" aria-label="Окно поиска">
                 <input type="search" placeholder="Поиск по сайту">
               </label>
             </form>
           </li>
           <li class="nav-list__item">
-            <a href="#">
+            <a href="#" aria-label="Переход в корзину">
               Корзина: пока пуста
             </a>
           </li>
@@ -47,27 +47,152 @@
     </div>
   </header>
 
-  <main>
-
+  <main class="page-form">
+    <div class="heading-wrapper">
+      <h1 class="heading">
+        Вязание на заказ
+      </h1>
+    </div>
+    <p class="page-form__text">
+      Мы будем рады воплотить в жизнь
+      ваши пожилания! Заполните простую
+      форму заказа и мы свяжемся с вами,
+      чтобы уточнить детали
+    </p>
+    <section class="page-form__order">
+      <h2 class="visually-hidden">
+        Форма для заказа
+      </h2>
+      <form class="page-form__order-send form-order" action="https://echo.htmlacademy.ru" method="POST">
+        <span class="form-order__options">
+          Тип
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label" aria-label="Тип товара">
+              <input type="radio" name="Тип" value="Акксесуар для интрьера" checked>
+              Акксесуар для интрьера
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label" aria-label="Тип товара">
+              <input type="radio" name="Тип" value="Детская игрушка">
+              Детская игрушка
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          Цвет
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Белый" aria-label="Цвет" checked>
+              Белый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Серый" aria-label="Цвет" checked>
+              Серый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="&laquo;Тиффани&raquo;" aria-label="Цвет">
+              &laquo;Тиффани&raquo;
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Черный" aria-label="Цвет">
+              Черный
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Розовый" aria-label="Цвет">
+              Розовый
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label">
+              <input type="checkbox" name="Цвет" value="Оранжевый" aria-label="Цвет">
+              Оранжевый
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          ФИО
+        </span>
+        <ul class="form-order__list">
+          <li class="form-order__list-item">
+            <label class="form-order__list-label" aria-label="Введите ваше имя">
+              Имя:
+              <input type="text" name="Имя" placeholder="Введите ваше имя*" required>
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label" aria-label="Введите вашу фамилию">
+              Фамилия:
+              <input type="text" name="Фамилия" placeholder="Укажите фамилию*" required>
+            </label>
+          </li>
+          <li class="form-order__list-item">
+            <label class="form-order__list-label" aria-label="Введите ваше отчество, если желаете">
+              Отчество:
+              <input type="text" name="Отчество" placeholder="Отчество, если желаете">
+            </label>
+          </li>
+        </ul>
+        <span class="form-order__options">
+          Тел
+        </span>
+        <label class="form-order__label" aria-label="Введите ваш номер телефона">
+          <input type="tel" name="Телефон" required pattern="\+7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}"
+            placeholder="+7 XXX XXX XX XX*">
+        </label>
+        <span class="form-order__options">
+          E-MAIL
+        </span>
+        <label class="form-order__label" aria-label="Введите ваш Email">
+          <input type="email" name="e-mail" required placeholder="Ваш Email*">
+        </label>
+        <span class="form-order__options">
+          Доп
+        </span>
+        <label class="form-order__label" aria-label="Опишите все ваши пожилания к заказу">
+          <textarea placeholder="Опишите все ваши пожилания к заказу"></textarea>
+        </label>
+        <span class="form-order__addition">
+          *Поля обязательные для заполнения
+        </span>
+        <button class="btn btn--main" type="submit">
+          Отправить заказ
+        </button>
+      </form>
+    </section>
   </main>
 
   <footer class="page-footer">
     <ul class="page-footer__list social-list">
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Инстаграме" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Инстаграме"><img src="#" alt="Мы в Инстаграме" width="10"
+            height="10"></a>
       </li>
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Фейсбуке"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
       </li>
       <li class="social-list__item">
-        <a href="#"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
+        <a href="#" aria-label="Наша страница в Твитере"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
       </li>
     </ul>
     <div class="page-footer__wrapper">
       <span class="page-footer__autor">
         Разработано
       </span>
-      <a class="page-footer__autor-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        aria-label="Логотип HTML academy">
         <img src="img/svg/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
       </a>
     </div>
