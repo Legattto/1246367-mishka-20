@@ -1,12 +1,248 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин-Mishka</title>
+</head>
 
-  </body>
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo" aria-label="Логотип компании Mishka">
+      <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
+    </a>
+    <button class="btn btn--hamburger js-hamburger-btn">
+      <span class="visually-hidden">Открыть меню</span>
+    </button>
+    <div class="navigation">
+      <button class="btn btn--close js-close-btn"></button>
+      <nav class="navigation__menu">
+        <ul class="navigation__menu-list nav-list">
+          <li class="nav-list__item">
+            <a href="catalog.html" aria-label="Переход в каталог товаров">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="form.html" aria-label="Переход на форму заказа">
+              Вязяние на заказ
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="menu-search" aria-label="Окно поиска">
+                <input type="search" placeholder="Поиск по сайту">
+              </label>
+            </form>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" aria-label="Переход в корзину">
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <h1 class="visually-hidden">Магазин Mishka товары для дома </h1>
+
+    <section class="services">
+      <h2 class="visually-hidden">
+        Виды товаров магазина Mishka
+      </h2>
+      <p class="services__slogan">
+        Милые штучки
+        ручной
+        работы&nbsp;для&nbsp;дома
+      </p>
+      <ul class="services__list ">
+        <li class="services__list-item">
+          <a href="catalog.html" aria-label="Переход на страницу каталога">
+            Предметы интерьера
+          </a>
+        </li>
+        <li class="services__list-item">
+          <a href="catalog.html" aria-label="Переход на страницу каталога">
+            Детские игрушки
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="week-goods">
+      <h2 class="heading">
+        Вязаные корзинки
+      </h2>
+      <span class="week-goods__week-product">
+        Товар недели
+      </span>
+      <p class="week-goods__text">
+        Экологически чистая пряжа, ручная работа. Доступны в шести
+        расцветках, и трех размерах.
+      </p>
+      <table class="week-goods__table">
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
+            Цвет:
+          </td>
+          <td class="week-goods__table-col">
+            &laquo;Тиффани&raquo;/серый
+          </td>
+        </tr>
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
+            Диаметр:
+          </td>
+          <td class="week-goods__table-col">
+            25 см
+          </td>
+        </tr>
+        <tr class="week-goods__table-row">
+          <td class="week-goods__table-col">
+            Высота:
+          </td>
+          <td class="week-goods__table-col">
+            15 см
+          </td>
+        </tr>
+      </table>
+      <img src="https://via.placeholder.com/150x150" alt="Вязанные корзинки" width="260" height="315">
+      <span class="week-goods__prise">
+        Цена: 990 руб.
+      </span>
+      <a class="btn btn--main" href="#">
+        Заказать
+      </a>
+    </section>
+
+    <section class="shop-info">
+      <h2 class="heading">
+        Коротко о нас:
+      </h2>
+      <ul class="shop-info__list">
+        <li class="shop-info__list-item">
+          Экологически чистые материалы
+        </li>
+        <li class="shop-info__list-item">
+          Скандинавский стиль по российской цене
+        </li>
+        <li class="shop-info__list-item">
+          Увеличивает лайки на фотографиях
+        </li>
+        <li class="shop-info__list-item">
+          Связано в ручную с любовью и умилением
+        </li>
+        <li class="shop-info__list-item">
+          Поддержка отечественного производителя
+        </li>
+        <li class="shop-info__list-item">
+          Поставляется в подарочной упаковке
+        </li>
+      </ul>
+      <section class="shop-info__reviews">
+        <h2 class="visually-hidden">
+          Отзывы о нашей компании
+        </h2>
+        <span class="heading">
+          Отзывы
+        </span>
+        <ul class="shop-info__reviews-slider">
+          <li class="shop-info__reviews-slideritem">
+            <p class="shop-info__reviews-comment">
+              Я молодая мама, но все равно
+              фотографии не набирали и близко
+              такого количества лайков, как у
+              популярных инстамамочек. В
+              отчаянии, я накупила аксесуаров
+              и игрушек в Мишке, и мои
+              фотографии сразу стали более
+              стильными, а так же набирают
+              больше лайков!
+            </p>
+            <span class="shop-info__reviews-name">
+              Анастасия Красильникова
+            </span>
+            <a href="#" class="shop-info__reviews-email" aria-label="Email пользователя">
+              @misssssiskras
+            </a>
+          </li>
+        </ul>
+        <button class="btn btn--arrow-left"></button>
+        <button class="btn btn--arrow-right"></button>
+        <a href="#" class="btn btn--main" aria-label="Написать отзыв">
+          Написать
+        </a>
+      </section>
+    </section>
+
+    <section class="contacts">
+      <h2 class="visually-hidden">
+        Контактная информация
+      </h2>
+      <span class="heading heading--small">
+        Контакты
+      </span>
+      <table class="contacts__table">
+        <tr class="contacts__table-row">
+          <td class="contacts__table-col">
+            e-mail:
+          </td>
+          <td class="contacts__table-col">
+            <a href="mailto:info@mimimishkashop.ru" aria-label="Наша почта">
+              info@mimimishkashop.ru
+            </a>
+          </td>
+        </tr>
+        <tr class="contacts__table-row">
+          <td class="contacts__table-col">
+            адрес:
+          </td>
+          <td class="contacts__table-col">
+            <address>
+              г. Санкт-Петербург,
+              ул. Большая
+              Конюшенная,
+              д. 19/8, офис 101
+            </address>
+          </td>
+        </tr>
+      </table>
+      <img src="#" alt="Мы на карте" width="322" height="457">
+      <a class="btn btn--main" aria-label="Напишите нам">
+        Напишите нам
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <ul class="page-footer__list social-list">
+      <li class="social-list__item">
+        <a href="#" aria-label="Наша страница в Инстаграме"><img src="#" alt="Мы в Инстаграме" width="10"
+            height="10"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" aria-label="Наша страница в Фейсбуке"><img src="#" alt="Мы в Фейсбуке" width="10" height="10"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" aria-label="Наша страница в Твитере"><img src="#" alt="Мы в Твитере" width="10" height="10"></a>
+      </li>
+    </ul>
+    <div class="page-footer__wrapper">
+      <span class="page-footer__autor">
+        Разработано
+      </span>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        aria-label="Логотип HTML academy">
+        <img src="img/svg/htmlacademy.svg" width="27" height="34" alt="Логотип HTML academy">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
 </html>
