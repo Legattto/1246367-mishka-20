@@ -1,0 +1,33 @@
+// base-color
+
+$color-black:                 #000000;
+$color-white:                 #ffffff;
+$color-tiffany:               #63d1bb;
+$color-dark-tiffany:          #56c3b2;
+$color-gray:                  #444444;
+$color-dark-white:            #f1f1f1;
+$color-transperent:           rgba(0, 0, 0, 0);
+$color-gray-light:            #ececec;
+
+// background-color
+
+$bg-white:                      $color-white;
+$bg-tiffany:                    $color-tiffany;
+$bg-dark-tiffany:               $color-dark-tiffany;
+$bg-dark-white:                 $color-dark-white;
+$bg-transperent:                $color-transperent;
+
+// font
+
+$font-base-color:               $color-gray;
+$font-heading-color:            $color-black;
+$font-additinal-color:          $color-tiffany;
+$font-white-color:              $color-white;
+
+$font-main:                "Open sans", "Arial", sans-serif;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

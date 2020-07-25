@@ -1,0 +1,19 @@
+.btn {
+  width: 260px;
+  height: 52px;
+  text-decoration: none;
+  color: $font-base-color;
+  display: block;
+  text-transform: uppercase;
+
+  &--main {
+    border: 2px solid $color-gray;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  &--small {
+    width: 192px;
+  }
+}

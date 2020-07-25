@@ -1,1 +1,32 @@
 // Начните писать стили здесь
+@import "./mixins.scss";
+@import "./variables.scss";
+
+// Подключаем нормолайз
+@import "./vendor/normalize.scss";
+
+// Подключем глобальные стили
+
+@import "./global/font.scss";
+@import "./global/typoghaphy.scss";
+@import "./global/container.scss";
+@import "./global/reboot.scss";
+@import "./global/utilits.scss";
+
+
+// Подключем БЭМ блоки
+
+@import "./blocks/page-header.scss";
+@import "./blocks/nav-list.scss";
+@import "./blocks/services.scss";
+@import "./blocks/week-goods.scss";
+@import "./blocks/heading.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/shop-info.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/catalog-list.scss";
+@import "./blocks/video.scss";
+@import "./blocks/page-form.scss";
+@import "./blocks/form-order.scss";
