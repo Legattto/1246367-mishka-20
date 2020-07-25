@@ -1,0 +1,29 @@
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-list__item {
+  border: 1px solid $color-gray-light;
+}
+
+.catalog-list__item-name {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $font-heading-color;
+}
+
+.catalog-list__item-description {
+  font-size: 13px;
+}
+
+.catalog-list__item-prise {
+  line-height: 24px;
+  font-weight: bold;
+  color: $font-heading-color;
+}
+
+.catalog-list__item-order {
+  text-decoration: none;
+  color: $font-base-color;
+}

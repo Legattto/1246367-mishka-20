@@ -1,0 +1,28 @@
+.form-order__options {
+  color: $font-additinal-color;
+
+  &::after {
+    content: "";
+    width: 198px;
+    height: 1px;
+    color: $font-additinal-color;
+    display: block;
+  }
+}
+
+.form-order__list-label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: $font-heading-color;
+
+  & input::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.form-order__addition {
+  font-size: 14px;
+  line-height: 16px;
+}
