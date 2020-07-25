@@ -1,0 +1,28 @@
+.services__slogan {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  color: $font-heading-color;
+}
+
+.services__list {
+  list-style: none;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.services__list-item {
+  a {
+    color: $font-white-color;
+    text-decoration: none;
+  }
+
+  &:nth-child(odd) {
+    background-color: $bg-tiffany;
+  }
+
+  &:nth-child(even) {
+    background-color: $bg-dark-tiffany;
+  }
+}

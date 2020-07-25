@@ -5,21 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Магазин-Mishka</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo" aria-label="Логотип компании Mishka">
       <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
     </a>
     <button class="btn btn--hamburger js-hamburger-btn">
       <span class="visually-hidden">Открыть меню</span>
     </button>
-    <div class="navigation">
+    <div class="page-header__nav">
       <button class="btn btn--close js-close-btn"></button>
-      <nav class="navigation__menu">
-        <ul class="navigation__menu-list nav-list">
+      <nav class="page-header__menu">
+        <ul class="page-header__menu-list nav-list">
           <li class="nav-list__item">
             <a href="catalog.html" aria-label="Переход в каталог товаров">
               Каталог товаров
@@ -31,11 +32,10 @@
             </a>
           </li>
           <li class="nav-list__item">
-            <form class="nav-list__item-form" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="menu-search" aria-label="Окно поиска">
-                <input type="search" placeholder="Поиск по сайту">
-              </label>
-            </form>
+            <a href="#" aria-label="Переход на страницу поиска">
+              Поиск по сайту
+            </a>
+
           </li>
           <li class="nav-list__item">
             <a href="#" aria-label="Переход в корзину">
@@ -47,7 +47,7 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main container">
     <h1 class="visually-hidden">Магазин Mishka товары для дома </h1>
 
     <section class="services">
@@ -59,7 +59,8 @@
         ручной
         работы&nbsp;для&nbsp;дома
       </p>
-      <ul class="services__list ">
+      <ul class="services__list">
+
         <li class="services__list-item">
           <a href="catalog.html" aria-label="Переход на страницу каталога">
             Предметы интерьера
@@ -219,7 +220,7 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <ul class="page-footer__list social-list">
       <li class="social-list__item">
         <a href="#" aria-label="Наша страница в Инстаграме"><img src="#" alt="Мы в Инстаграме" width="10"
