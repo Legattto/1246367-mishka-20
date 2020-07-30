@@ -6,4 +6,8 @@ body {
   font-size: 15px;
   line-height: 30px;
   color: $font-base-color;
+
+  @include tablet {
+    font-size: 17px;
+  }
 }

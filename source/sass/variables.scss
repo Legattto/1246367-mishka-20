@@ -24,10 +24,15 @@ $font-heading-color:            $color-black;
 $font-additinal-color:          $color-tiffany;
 $font-white-color:              $color-white;
 
-$font-main:                "Open sans", "Arial", sans-serif;
+$font-main:                     "Open sans", "Arial", sans-serif;
 
 // Retina
 //---------------------------------
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Viewports
+
+$tablet-width:                  768px;
+$desktop-width:                 1150px;

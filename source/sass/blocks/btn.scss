@@ -1,19 +1,53 @@
 .btn {
   width: 260px;
-  height: 52px;
+  min-height: 52px;
   text-decoration: none;
   color: $font-base-color;
   display: block;
   text-transform: uppercase;
+  padding: 0;
 
   &--main {
     border: 2px solid $color-gray;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 20px;
+    text-align: center;
   }
 
-  &--small {
-    width: 192px;
+  &--arrow {
+    border: 1px solid $color-gray-light;
+    background-color: $bg-transperent;
+    padding: 13px 42px 13px 38px;
+
+    @include tablet {
+      border: none;
+      padding: 15px;
+    }
+  }
+
+  &--arrow-rigth {
+    transform: scaleX(-1);
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &--tablet {
+    @include tablet {
+      order: 0;
+      width: 175px;
+    }
+  }
+
+  &--pos {
+    @include tablet {
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
   }
 }

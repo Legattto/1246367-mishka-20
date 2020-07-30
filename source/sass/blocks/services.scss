@@ -3,6 +3,29 @@
   font-size: 27px;
   line-height: 30px;
   color: $font-heading-color;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 73px;
+  margin-bottom: 120px;
+
+  @include tablet {
+    margin-top: 155px;
+    margin-bottom: 372px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 530px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    margin-top: 158px;
+    margin-bottom: 355px;
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .services__list {
@@ -10,12 +33,28 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
+  padding: 0;
+  margin: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .services__list-item {
   a {
     color: $font-white-color;
     text-decoration: none;
+
+    @include tablet {
+      padding-right: 150px;
+      padding-left: 30px;
+    }
+
+    @include desktop {
+      padding-right: 250px;
+    }
   }
 
   &:nth-child(odd) {
