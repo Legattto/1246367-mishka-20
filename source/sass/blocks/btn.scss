@@ -13,6 +13,7 @@
     font-size: 18px;
     line-height: 20px;
     text-align: center;
+    padding: 16px 86px;
   }
 
   &--arrow {
@@ -34,20 +35,37 @@
     display: none;
   }
 
-  &--tablet {
+  &--grid {
     @include tablet {
-      order: 0;
+      padding: 16px 26px;
       width: 175px;
+      grid-area: btn;
     }
   }
 
-  &--pos {
+  &--size {
+    padding: 16px 40px;
+
+    @include tablet {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &--center {
     @include tablet {
       margin: 0 auto;
     }
 
     @include desktop {
-      margin: 0;
+      margin-left: 1px;
+      width: 230px;
+    }
+  }
+
+  &--position {
+    @include desktop {
+      margin-left: 175px;
     }
   }
 }

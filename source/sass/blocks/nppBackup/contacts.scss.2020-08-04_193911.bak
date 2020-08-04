@@ -2,23 +2,12 @@
   margin-top: 45px;
   padding-top: 38px;
 
-  @include tablet {
-    padding-top: 0;
-    margin-top: 140px;
-
-    @include desktop {
-      margin-top: 170px;
-    }
-  }
-
   img {
     margin-bottom: 30px;
 
-    @include tablet {
-      width: 668px;
-      height: 457px;
-      margin-bottom: 55px;
-    }
+	@include tablet {
+	 width:
+	}
   }
 
   @include desktop {
@@ -28,10 +17,8 @@
 
     img {
       position: absolute;
-      width: 527px;
-      height: 457px;
-      right: 50px;
-      top: -30px;
+      right: 0;
+      top: 0;
     }
   }
 }
@@ -42,13 +29,11 @@
   flex-direction: column;
 
   @include tablet {
-    margin-top: 49px;
     flex-direction: row;
   }
 
   @include desktop {
     flex-direction: column;
-    margin-bottom: 84px;
   }
 }
 

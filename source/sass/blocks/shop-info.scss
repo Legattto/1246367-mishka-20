@@ -1,49 +1,48 @@
 .shop-info {
+  position: relative;
+  padding-top: 31px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/svg/zigzag-line-mobile.svg");
+    background-color: $bg-transperent;
+    background-repeat: repeat-x;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    fill: $color-dark-white;
+
+    @include tablet {
+      background-image: url("../../img/svg/zigzag-line-tablet.svg");
+      height: 17px;
+    }
+  }
+
   @include tablet {
-    margin-top: 124px;
     position: relative;
-  }
-}
-
-.shop-info__reviews {
-  @include tablet {
-    display: flex;
-    max-width: 768px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  @include desktop {
-    margin-left: 174px;
-  }
-}
-
-.shop-info__list,
-.shop-info__reviews-slider {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.shop-info__reviews-slider {
-  margin-top: 30px;
-
-  @include tablet {
-    order: 1;
+    padding-top: 66px;
+    margin-bottom: 20px;
   }
 }
 
 .shop-info__list {
-  @include tablet {
-    display: grid;
-    grid-template-columns: 235px 235px;
-    gap: 110px;
-  }
-}
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 28px;
 
-.shop-info__reviews-slider-item {
+  svg {
+    fill: $color-tiffany;
+    margin-bottom: 20px;
+  }
+
   @include tablet {
-    font-size: 17px;
+    column-count: 2;
+  }
+
+  @include desktop {
+    max-width: 628px;
   }
 }
 
@@ -52,59 +51,10 @@
   font-size: 17px;
   line-height: 20px;
   color: $font-heading-color;
-  margin-bottom: 83px;
-
-  &:last-child {
-    margin-bottom: 58px;
-  }
+  margin-bottom: 50px;
+  min-height: 93px;
 
   @include tablet {
-    margin: 0;
-  }
-}
-
-.shop-info__reviews-name {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
-  color: $font-heading-color;
-}
-
-.shop-info__reviews-email {
-  text-decoration: none;
-  color: $font-base-color;
-  font-size: 17px;
-}
-
-.shop-info__reviews-comment {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 60px;
-
-  @include tablet {
-    max-width: 668px;
-  }
-
-  @include desktop {
-    max-width: 875px;
-  }
-}
-
-.shop-info__reviews-box {
-  display: flex;
-  flex-direction: column;
-  max-width: 284px;
-  min-height: 58px;
-}
-
-.shop-info__reviews-btn {
-  display: flex;
-  width: 260px;
-
-  @include tablet {
-    width: 137px;
-    position: absolute;
-    right: 30px;
-    bottom: -10px;
+    min-height: 100px;
   }
 }

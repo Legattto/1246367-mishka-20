@@ -1,21 +1,21 @@
 .container {
   width: 100%;
   min-width: 320px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 30px;
 
-  &--np {
-    @media (max-width: 767px) {
-      padding: 0;
-    }
+  &--no-mobile-padding {
+    padding: 0;
   }
 
   @include tablet {
-    min-width: 768px;
+    padding: 0 50px;
   }
 
-  @include desktop {
-    min-width: 1150px;
-    padding: 0 50px;
+  &--desktop {
+    @include desktop {
+      padding-left: 224px;
+    }
   }
 }

@@ -2,10 +2,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 30px;
 
   @include tablet {
     display: flex;
     flex-direction: column;
+    margin-top: 67px;
   }
 
   @include desktop {
@@ -15,12 +17,12 @@
 
 .catalog-list__item {
   border: 1px solid $color-gray-light;
+  margin-bottom: 30px;
 
   @include tablet {
     img {
       width: 335px;
       height: 335px;
-      margin-right: 32px;
     }
 
     margin-bottom: 53px;
@@ -29,38 +31,48 @@
   }
 
   @include desktop {
+    margin-right: 52px;
+    max-width: 316px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
     img {
       width: 316px;
       height: 462px;
-      margin-bottom: 27px;
-      margin-right: 52px;
     }
 
     flex-direction: column;
   }
 }
 
-.catalog-list__item:last-child img {
-  margin-right: 0;
-}
-
 .catalog-list__item-box {
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+
   @include tablet {
-    display: flex;
-    flex-direction: column;
     width: 56%;
     padding-right: 30px;
+  }
+
+  @include tablet {
+    width: 100%;
   }
 }
 
 .catalog-list__item-prise-box {
-  margin-top: 20px;
+  margin-top: 22px;
+  margin-bottom: 26px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   @include tablet {
-    margin-top: auto;
+    margin-top: 23px;
     margin-bottom: 25px;
   }
 }
@@ -70,10 +82,25 @@
   font-size: 17px;
   line-height: 24px;
   color: $font-heading-color;
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .catalog-list__item-description {
   font-size: 13px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $color-line;
+
+  @include tablet {
+    padding-bottom: 170px;
+    font-size: 15px;
+  }
+
+  @include desktop {
+    padding-bottom: 35px;
+  }
 }
 
 .catalog-list__item-prise {

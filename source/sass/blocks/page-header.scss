@@ -1,170 +1,35 @@
 .page-header {
-  min-height: 395px;
   background-color: $bg-white;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
 
+  @include tablet {
+    border-bottom: 1px solid $color-gray-light;
+    height: 89px;
+  }
+
   a {
     text-decoration: none;
     color: $font-heading-color;
   }
-
-  @include tablet {
-    min-height: 89px;
-  }
-}
-
-.page-header__nav {
-  display: grid;
-  width: 100%;
-  max-height: 395px;
-  grid-template-areas:
-    "nav1"
-    "nav2";
-  grid-template-columns: 260px;
-  grid-template-rows: 158px;
-
-  @include tablet {
-    position: relative;
-    max-height: 89px;
-    grid-template-areas: ". nav2 nav2";
-    grid-template-columns: 340px 53px 285px;
-    grid-template-rows: 89px;
-  }
-
-  @include desktop {
-    grid-template-areas: "nav1 . nav2";
-    grid-template-columns: 415px 246px 350px;
-  }
 }
 
 .page-header__logo {
-  a {
-    padding: 22px 87px;
-    display: block;
-
-    @include tablet {
-      position: absolute;
-      padding: 0;
-      top: 22px;
-      left: 50px;
-    }
-
-    @include desktop {
-      top: 9px;
-      left: 500px;
-    }
-  }
-}
-
-.page-header__nav-1,
-.page-header__nav-2 {
   display: flex;
-  flex-direction: column;
-
-  a {
-    padding-left: 47px;
-    padding-right: 30px;
-    padding-top: 27px;
-    padding-bottom: 28px;
-  }
-}
-
-.page-header__nav-1 {
-  grid-area: nav1;
+  min-height: 89px;
+  justify-content: center;
+  border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    top: 88px;
-    font-size: 15px;
-
-    a {
-      padding: 0;
-      padding-left: 20px;
-    }
+    left: 50px;
+    top: 0;
+    border: none;
   }
 
   @include desktop {
-    position: static;
-    font-size: 17px;
-
-    a {
-      padding: 0;
-      padding-right: 30px;
-      padding-top: 32px;
-      padding-bottom: 31px;
-    }
-  }
-}
-
-.page-header__nav-2 {
-  grid-area: nav2;
-  position: relative;
-
-  svg {
-    position: absolute;
-    top: 32px;
-    left: 2px;
-
-    @include tablet {
-      top: 36px;
-      left: 34px;
-    }
-  }
-
-  @include tablet {
-    span {
-      display: none;
-    }
-
-    a {
-      padding: 0;
-
-      &:last-child {
-        padding-left: 137px;
-        padding-top: 32px;
-        padding-right: 19px;
-        padding-bottom: 32px;
-      }
-    }
-
-    display: flex;
-  }
-}
-
-.page-header__nav-3 {
-  display: none;
-
-  @include desktop {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    top: 88px;
-    font-size: 15px;
-
-    a {
-      padding: 0;
-      padding-right: 20px;
-    }
-  }
-}
-
-.page-header__nav-addition {
-  display: none;
-
-  @include tablet {
-    display: block;
-    position: absolute;
-    top: 88px;
-    left: 459px;
-    font-weight: normal;
-    font-size: 15px;
-  }
-
-  @include desktop {
-    left: 800px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
