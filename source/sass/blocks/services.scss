@@ -78,28 +78,46 @@
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  min-height: 103px;
+  max-height: 103px;
   margin: 0;
-  padding: 0 0 0 30px;
   position: relative;
 
   svg {
     position: absolute;
-    right: 27px;
+    right: 36px;
+    top: 20px;
     fill: $color-tiffany-icons;
     opacity: 0.5;
   }
 
-  &:nth-child(1) {
+  &:nth-child(2) {
     svg {
-      right: 36px;
+      right: 27px;
+
+      @include tablet {
+        right: 33px;
+      }
+
+      @include desktop {
+        right: 35px;
+      }
     }
+  }
+
+  span {
+    max-width: 130px;
   }
 
   a {
     color: $font-white-color;
     text-decoration: none;
-    max-width: 130px;
+    min-width: 100%;
+    min-height: 100%;
+    padding-left: 30px;
+    padding-top: 23px;
+    padding-bottom: 25px;
+    position: relative;
+    display: flex;
 
     @include tablet {
       padding-top: 25px;
@@ -109,7 +127,6 @@
     }
 
     @include desktop {
-      padding-left: 6px;
       padding-top: 30px;
     }
   }

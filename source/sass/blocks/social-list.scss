@@ -4,6 +4,7 @@
   border-bottom: 1px solid $color-line;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   @include tablet {
     border: none;
