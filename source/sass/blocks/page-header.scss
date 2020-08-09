@@ -1,8 +1,35 @@
 .page-header {
-  min-height: 79px;
   background-color: $bg-white;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+
+  @include tablet {
+    border-bottom: 1px solid $color-gray-light;
+    height: 89px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $font-heading-color;
+  }
 }
 
 .page-header__logo {
-  margin: 0 auto;
+  display: flex;
+  min-height: 89px;
+  justify-content: center;
+  border-bottom: 1px solid $color-gray-light;
+
+  @include tablet {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    border: none;
+  }
+
+  @include desktop {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -1,21 +1,134 @@
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 489px;
+  font-style: normal;
+  font-weight: bold;
+  background-color: $bg-light-white;
+  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+
+  @include tablet {
+    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-position: center;
+  }
+}
+
 .services__slogan {
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
   color: $font-heading-color;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 73px;
+  margin-bottom: 120px;
+
+  @include tablet {
+    margin-top: 155px;
+    margin-bottom: 372px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 530px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    margin-top: 158px;
+    margin-bottom: 355px;
+    width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .services__list {
+  position: relative;
   list-style: none;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
+  padding: 0;
+  margin: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/svg/bg-zigzag-fill.svg");
+      background-position: bottom;
+      background-repeat: repeat-x;
+      bottom: -10px;
+      height: 24px;
+      width: 100%;
+    }
+  }
 }
 
 .services__list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  max-height: 103px;
+  margin: 0;
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 36px;
+    top: 20px;
+    fill: $color-tiffany-icons;
+    opacity: 0.5;
+  }
+
+  &:nth-child(2) {
+    svg {
+      right: 27px;
+
+      @include tablet {
+        right: 33px;
+      }
+
+      @include desktop {
+        right: 35px;
+      }
+    }
+  }
+
+  span {
+    max-width: 130px;
+  }
+
   a {
     color: $font-white-color;
     text-decoration: none;
+    min-width: 100%;
+    min-height: 100%;
+    padding-left: 30px;
+    padding-top: 23px;
+    padding-bottom: 25px;
+    position: relative;
+    display: flex;
+
+    @include tablet {
+      padding-top: 25px;
+      min-height: 119px;
+      padding-right: 150px;
+      padding-left: 36px;
+    }
+
+    @include desktop {
+      padding-top: 30px;
+    }
   }
 
   &:nth-child(odd) {

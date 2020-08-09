@@ -1,6 +1,35 @@
+.social-list {
+  padding: 0;
+  margin: 30px 50px;
+  border-bottom: 1px solid $color-line;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablet {
+    border: none;
+    margin: 0;
+    margin-top: 30px;
+  }
+}
+
 .social-list__item {
+  max-width: 25px;
+  height: auto;
+  margin-right: 40px;
+  align-items: center;
+
+  svg {
+    fill: $color-social;
+  }
+
   a {
+    padding: 10px;
     text-decoration: none;
     color: $font-base-color;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }

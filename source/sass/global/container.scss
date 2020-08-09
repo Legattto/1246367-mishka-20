@@ -1,6 +1,21 @@
 .container {
   width: 100%;
-  max-width: 321px;
+  min-width: 320px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 30px;
+
+  &--no-mobile-padding {
+    padding: 0;
+  }
+
+  @include tablet {
+    padding: 0 50px;
+  }
+
+  &--desktop {
+    @include desktop {
+      padding-left: 224px;
+    }
+  }
 }

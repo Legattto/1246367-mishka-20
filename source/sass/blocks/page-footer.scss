@@ -1,3 +1,24 @@
+.page-footer {
+  background-color: $bg-dark-white;
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: 57px;
+    display: flex;
+  }
+
+  @include desktop {
+    margin-top: 105px;
+  }
+}
+
+.page-footer__flex {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .page-footer__list {
   list-style: none;
 }
@@ -6,4 +27,32 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
+}
+
+.page-footer__logo {
+  display: none;
+
+  @include tablet {
+    display: block;
+    margin-top: 51px;
+    margin-bottom: 58px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 180px;
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+
+  span {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+  }
 }

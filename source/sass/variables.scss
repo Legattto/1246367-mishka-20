@@ -8,6 +8,10 @@ $color-gray:                  #444444;
 $color-dark-white:            #f1f1f1;
 $color-transperent:           rgba(0, 0, 0, 0);
 $color-gray-light:            #ececec;
+$color-light-white:           #f9f9f9;
+$color-tiffany-icons:         #149080;
+$color-line:                  #e5e5e5;
+$color-social:                #231f20;
 
 // background-color
 
@@ -16,6 +20,7 @@ $bg-tiffany:                    $color-tiffany;
 $bg-dark-tiffany:               $color-dark-tiffany;
 $bg-dark-white:                 $color-dark-white;
 $bg-transperent:                $color-transperent;
+$bg-light-white:                $color-light-white;
 
 // font
 
@@ -24,10 +29,15 @@ $font-heading-color:            $color-black;
 $font-additinal-color:          $color-tiffany;
 $font-white-color:              $color-white;
 
-$font-main:                "Open sans", "Arial", sans-serif;
+$font-main:                     "Open sans", "Arial", sans-serif;
 
 // Retina
 //---------------------------------
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Viewports
+
+$tablet-width:                  768px;
+$desktop-width:                 1150px;

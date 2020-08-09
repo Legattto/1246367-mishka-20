@@ -1,0 +1,117 @@
+.reviews {
+  position: relative;
+
+  @include tablet {
+    display: flex;
+    padding-top: 60px;
+    max-width: 768px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+    background-position: 0 0;
+    min-height: 457px;
+    margin-bottom: 35px;
+
+    @include desktop {
+      background-position: 50px 0;
+      max-width: 1150px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/svg/zigzag-line-mobile.svg");
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: repeat-x;
+    bottom: -45px;
+    width: 100%;
+    height: 6px;
+    fill: #f1f1f1;
+
+    @include tablet {
+      background-image: url("../../img/svg/zigzag-line-tablet.svg");
+      height: 17px;
+      bottom: -85px;
+    }
+  }
+}
+
+.reviews__slider {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+
+  @include tablet {
+    grid-area: ul;
+  }
+}
+
+.reviews__slider-item {
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.reviews__name {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: $font-heading-color;
+}
+
+.reviews__email {
+  text-decoration: none;
+  color: $font-base-color;
+  font-size: 17px;
+}
+
+.reviews__comment {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+
+  @include tablet {
+    max-width: 668px;
+  }
+
+  @include desktop {
+    max-width: 875px;
+  }
+}
+
+.reviews__grid {
+  position: relative;
+
+  @include tablet {
+    display: grid;
+    grid-template-areas:
+      "hd btn"
+      "ul ul";
+    grid-template-columns: 74% 26%;
+  }
+}
+
+.reviews__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 284px;
+  min-height: 58px;
+  margin-bottom: 30px;
+}
+
+.reviews__btn {
+  display: flex;
+  width: 260px;
+  margin-bottom: 38px;
+
+  @include tablet {
+    width: 137px;
+    position: absolute;
+    right: 19px;
+    bottom: -10px;
+  }
+}

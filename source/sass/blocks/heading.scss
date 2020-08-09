@@ -1,8 +1,11 @@
 .heading {
+  position: relative;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
   color: $font-heading-color;
+  padding: 0;
+  margin: 0;
 
   &--small {
     font-size: 18px;
@@ -10,6 +13,58 @@
 
   &--big {
     font-size: 27px;
+  }
+
+  &--bg {
     background-color: $bg-dark-white;
+    padding: 73px 41px;
+    text-align: center;
+  }
+
+  &--margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &--flag {
+    @include tablet {
+      &::after {
+        content: "";
+        background-image: url("../../img/svg/icon-flag.svg");
+        width: 47px;
+        height: 81px;
+        position: absolute;
+        top: -20px;
+        right: 0;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        content: "";
+        background-image: url("../../img/svg/icon-flag.svg");
+        width: 47px;
+        height: 81px;
+        position: absolute;
+        top: -20px;
+        left: -104px;
+      }
+    }
+  }
+
+  &--grid {
+    @include tablet {
+      grid-area: hd;
+    }
+  }
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

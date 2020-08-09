@@ -1,21 +1,127 @@
+.week-goods {
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 36px;
+
+  @include tablet {
+    margin-bottom: 52px;
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 115px;
+  }
+
+  @include tablet {
+    img {
+      position: absolute;
+      width: 333px;
+      height: 404px;
+      top: 125px;
+      right: 50px;
+
+      @include desktop {
+        width: 525px;
+        height: 636px;
+        top: -54px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.week-goods__wrap {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    z-index: 5;
+  }
+}
+
 .week-goods__week-product {
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: $font-additinal-color;
+
+  @include tablet {
+    padding-top: 8px;
+    line-height: 17px;
+    width: 100px;
+    text-align: center;
+  }
+
+  @include desktop {
+    margin-left: 33px;
+    margin-right: 43px;
+  }
 }
 
 .week-goods__text {
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    line-height: 30px;
+    width: 290px;
+    margin-bottom: 48px;
+  }
+
+  @include desktop {
+    margin-left: 185px;
+  }
+}
+
+.week-goods__table {
+  border-collapse: collapse;
+  margin-bottom: 28px;
+  max-width: 260px;
+
+  @include tablet {
+    max-width: 272px;
+    margin-bottom: 57px;
+  }
+
+  @include desktop {
+    margin-left: 185px;
+  }
 }
 
 .week-goods__table-col {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-right: 20px;
   line-height: 20px;
+  border-bottom: 1px solid $color-gray-light;
 }
 
 .week-goods__prise {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+
+  @include tablet {
+    width: 40%;
+    margin-bottom: 33px;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    width: 58%;
+    margin-top: 109px;
+  }
 }
