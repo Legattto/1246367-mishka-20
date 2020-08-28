@@ -19,20 +19,17 @@
       height: 457px;
       margin-bottom: 55px;
     }
+
+    @include desktop {
+      width: 527px;
+      margin-bottom: 0;
+    }
   }
 
   @include desktop {
     position: relative;
     display: flex;
     flex-direction: column;
-
-    img {
-      position: absolute;
-      width: 527px;
-      height: 457px;
-      right: 50px;
-      top: -30px;
-    }
   }
 }
 
@@ -43,11 +40,9 @@
 
   @include tablet {
     margin-top: 49px;
-    flex-direction: row;
   }
 
   @include desktop {
-    flex-direction: column;
     margin-bottom: 84px;
   }
 }
@@ -71,5 +66,11 @@
 
   @include tablet {
     margin-right: 50px;
+  }
+}
+
+.contacts__wrapper {
+  @include desktop {
+    display: flex;
   }
 }

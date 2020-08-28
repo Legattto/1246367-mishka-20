@@ -6,9 +6,10 @@
   display: block;
   text-transform: uppercase;
   padding: 0;
+  background-color: $color-white;
 
   &--main {
-    border: 2px solid $color-gray;
+    border: 2px solid $color-light-black;
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
@@ -44,11 +45,21 @@
   }
 
   &--size {
-    padding: 16px 40px;
+    padding: 16px 20px;
 
     @include tablet {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  &--form {
+    @include tablet {
+      width: 230px;
+    }
+
+    @include desktop {
+      margin-left: 175px;
     }
   }
 
@@ -63,9 +74,49 @@
     }
   }
 
+  &--play {
+    position: absolute;
+    top: 37px;
+    left: 80px;
+    width: 100px;
+    height: 76px;
+    border: none;
+    background: $bg-transperent;
+
+    @include tablet {
+      top: 189px;
+      left: 283px;
+    }
+  }
+
+  &--video {
+    padding: 16px 20px;
+    width: 192px;
+    margin: 0 auto 31px auto;
+
+    @include tablet {
+      width: 584px;
+      margin-bottom: 46px;
+      font-size: 17px;
+      line-height: 16px;
+    }
+
+    @include desktop {
+      width: 230px;
+      margin-left: 0;
+    }
+  }
+
   &--position {
     @include desktop {
       margin-left: 175px;
+    }
+  }
+
+  &--contact {
+    @include desktop {
+      position: absolute;
+      bottom: 0;
     }
   }
 }

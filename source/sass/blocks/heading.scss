@@ -9,6 +9,11 @@
 
   &--small {
     font-size: 18px;
+
+    @include tablet {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &--big {
@@ -19,6 +24,21 @@
     background-color: $bg-dark-white;
     padding: 73px 41px;
     text-align: center;
+    z-index: -100;
+
+    @include tablet {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../img/svg/bg-zigzag-fill.svg");
+        background-position: bottom;
+        background-repeat: repeat-x;
+        left: 0;
+        bottom: -10px;
+        height: 24px;
+        width: 100%;
+      }
+    }
   }
 
   &--margin {
@@ -36,18 +56,10 @@
         position: absolute;
         top: -20px;
         right: 0;
-      }
-    }
 
-    @include desktop {
-      &::before {
-        content: "";
-        background-image: url("../../img/svg/icon-flag.svg");
-        width: 47px;
-        height: 81px;
-        position: absolute;
-        top: -20px;
-        left: -104px;
+        @include desktop {
+          left: -111px;
+        }
       }
     }
   }
@@ -66,5 +78,21 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  &--video {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 24px 0;
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include desktop {
+      max-width: 170px;
+      margin-left: 81px;
+    }
   }
 }
