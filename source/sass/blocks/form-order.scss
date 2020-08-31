@@ -259,14 +259,14 @@
   }
 
   &--radio {
-    margin-left: 61px;
+    padding-left: 61px;
     cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
-      left: -65px;
-      top: -10px;
+      left: 0;
+      top: -15px;
       width: 42px;
       height: 42px;
       border: 2px solid $color-light-black;
@@ -275,21 +275,20 @@
       @include tablet {
         width: 52px;
         height: 52px;
-        top: -15px;
       }
     }
   }
 
   &--checkbox {
-    margin-left: 62px;
-    margin-top: 10px;
+    padding-left: 62px;
+    padding-top: 10px;
     cursor: pointer;
 
     &::before {
       content: "";
       position: absolute;
-      left: -65px;
-      top: -10px;
+      left: 0;
+      top: 0;
       width: 38px;
       height: 38px;
       border: 2px solid $color-light-black;
@@ -297,12 +296,11 @@
       @include tablet {
         width: 52px;
         height: 52px;
-        top: -15px;
       }
     }
 
     @include tablet {
-      margin-top: 15px;
+      padding-top: 15px;
     }
   }
 
@@ -377,10 +375,13 @@
   border-color: $color-tiffany;
 }
 
-.form-order__list--checkbox input:active + label::before,
 .form-order__list--radio input:active + label::before {
+  border-color: $color-gray-light;
+}
+
+.form-order__list--checkbox input:active + label::before {
+  border-color: $color-gray;
   opacity: 0.3;
-  border-color: $color-light-black;
 }
 
 .form-order__list--radio input:checked + label::before {
@@ -388,18 +389,32 @@
   outline: none;
 }
 
+.form-order__list--checkbox input:disabled + label,
+.form-order__list--radio input:disabled + label::before {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .form-order__list--checkbox input:checked + label {
   &::after {
     content: "";
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 13px;
     width: 11px;
     height: 20px;
     transform: translateY(-50%) skewX(6deg) rotate(48deg);
 
-    border-bottom: 1px solid $color-text;
-    border-right: 1px solid $color-text;
+    border-bottom: 2px solid $color-black;
+    border-right: 2px solid $color-black;
+
+    @include tablet {
+      top: 60%;
+      left: 18px;
+      width: 17px;
+      height: 30px;
+      transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+    }
   }
 }
 
