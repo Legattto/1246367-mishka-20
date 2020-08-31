@@ -214,7 +214,6 @@
   flex-direction: column;
 
   @include tablet {
-    background-color: $bg-dark-white;
     flex-direction: row;
     width: 100%;
   }
@@ -247,6 +246,7 @@
   line-height: 18px;
   color: $font-heading-color;
   position: relative;
+  min-height: 36px;
 
   input::placeholder {
     font-size: 17px;
@@ -383,6 +383,26 @@
   border-color: $color-light-black;
 }
 
+.form-order__list--radio input:checked + label::before {
+  box-shadow: inset 0 0 0 13px $bg-white, inset 0 0 20px 20px $bg-tiffany;
+  outline: none;
+}
+
+.form-order__list--checkbox input:checked + label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 13px;
+    width: 11px;
+    height: 20px;
+    transform: translateY(-50%) skewX(6deg) rotate(48deg);
+
+    border-bottom: 1px solid $color-text;
+    border-right: 1px solid $color-text;
+  }
+}
+
 .form-order__list-label-svg {
   position: absolute;
   fill: $color-black;
@@ -444,11 +464,11 @@
       margin-bottom: 49px;
     }
   }
+}
 
-  &--color {
-    @include tablet {
-      background-color: $bg-dark-white;
-    }
+.form-order__background {
+  @include tablet {
+    background-color: $bg-dark-white;
   }
 }
 

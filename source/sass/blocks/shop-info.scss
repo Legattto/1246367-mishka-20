@@ -92,6 +92,8 @@
   color: $font-heading-color;
   margin-bottom: 50px;
   min-height: 93px;
+  display: inline-flex;
+  flex-direction: column;
 
   @include tablet {
     min-height: 100px;

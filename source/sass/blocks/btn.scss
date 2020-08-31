@@ -7,6 +7,8 @@
   text-transform: uppercase;
   padding: 0;
   background-color: $color-white;
+  align-self: flex-start;
+  cursor: pointer;
 
   &--main {
     border: 2px solid $color-light-black;
@@ -18,6 +20,7 @@
   }
 
   &--arrow {
+    cursor: pointer;
     border: 1px solid $color-gray-light;
     background-color: $bg-transperent;
     padding: 13px 42px 13px 38px;
@@ -38,6 +41,7 @@
 
   &--grid {
     @include tablet {
+      align-self: flex-start;
       padding: 16px 26px;
       width: 175px;
       grid-area: btn;
@@ -86,6 +90,19 @@
     @include tablet {
       top: 189px;
       left: 283px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.5;
     }
   }
 

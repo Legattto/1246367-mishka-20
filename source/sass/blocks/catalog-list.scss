@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   margin-top: 30px;
-  align-items: center;
 
   @include tablet {
     display: flex;
@@ -13,6 +12,7 @@
 
   @include desktop {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -34,10 +34,10 @@
   }
 
   @include desktop {
-    margin-right: 52px;
+    margin-right: 51px;
     max-width: 316px;
 
-    &:last-child {
+    &:nth-child(3n) {
       margin-right: 0;
     }
 
@@ -51,8 +51,6 @@
 }
 
 .catalog-list__item-box {
-  margin-left: 28px;
-  margin-right: 28px;
   margin-top: 27px;
   display: flex;
   flex-direction: column;
@@ -60,6 +58,7 @@
   @include tablet {
     width: 56%;
     padding-right: 30px;
+    padding-left: 30px;
   }
 
   @include tablet {
@@ -103,6 +102,12 @@
 
   @include desktop {
     padding-bottom: 35px;
+  }
+
+  &--toy {
+    @include desktop {
+      padding-bottom: 12px;
+    }
   }
 }
 
