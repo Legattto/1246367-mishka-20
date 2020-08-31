@@ -6,9 +6,12 @@
   display: block;
   text-transform: uppercase;
   padding: 0;
+  background-color: $color-white;
+  align-self: flex-start;
+  cursor: pointer;
 
   &--main {
-    border: 2px solid $color-gray;
+    border: 2px solid $color-light-black;
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
@@ -17,6 +20,7 @@
   }
 
   &--arrow {
+    cursor: pointer;
     border: 1px solid $color-gray-light;
     background-color: $bg-transperent;
     padding: 13px 42px 13px 38px;
@@ -37,6 +41,7 @@
 
   &--grid {
     @include tablet {
+      align-self: flex-start;
       padding: 16px 26px;
       width: 175px;
       grid-area: btn;
@@ -44,11 +49,21 @@
   }
 
   &--size {
-    padding: 16px 40px;
+    padding: 16px 20px;
 
     @include tablet {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  &--form {
+    @include tablet {
+      width: 230px;
+    }
+
+    @include desktop {
+      margin-left: 175px;
     }
   }
 
@@ -63,9 +78,62 @@
     }
   }
 
+  &--play {
+    position: absolute;
+    top: 37px;
+    left: 80px;
+    width: 100px;
+    height: 76px;
+    border: none;
+    background: $bg-transperent;
+
+    @include tablet {
+      top: 189px;
+      left: 283px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+  }
+
+  &--video {
+    padding: 16px 20px;
+    width: 192px;
+    margin: 0 auto 31px auto;
+
+    @include tablet {
+      width: 584px;
+      margin-bottom: 46px;
+      font-size: 17px;
+      line-height: 16px;
+    }
+
+    @include desktop {
+      width: 230px;
+      margin-left: 0;
+    }
+  }
+
   &--position {
     @include desktop {
       margin-left: 175px;
+    }
+  }
+
+  &--contact {
+    @include desktop {
+      position: absolute;
+      bottom: 0;
     }
   }
 }

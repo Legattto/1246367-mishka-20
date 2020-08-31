@@ -18,4 +18,10 @@
       padding-left: 224px;
     }
   }
+
+  &--no-tablet-padding {
+    @include tablet {
+      padding: 0;
+    }
+  }
 }
