@@ -12,7 +12,11 @@
 
   <header class="page-header">
     <a class="page-header__logo" aria-label="Логотип компании Mishka">
-      <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/svg/mishka-logo-desktop.svg.svg">
+        <source media="(min-width: 768px)" srcset="img/svg/mishka-logo-tablet.svg.svg">
+        <img src="img/svg/mishka-logo-mobile.svg" alt="Логотип компании Mishka" width="86" height="35">
+      </picture>
     </a>
     <div class="container container--no-mobile-padding">
       <button class="btn  btn--hide nojs-btn">
@@ -81,7 +85,7 @@
         <ul class="services__list">
           <li class="services__list-item">
             <a href="catalog.html" aria-label="Переход на страницу каталога">
-              <span>Предметы  <br>
+              <span>Предметы <br>
                 интерьера</span>
               <svg x="0px" y="0px" width="40.219px" height="62.411px" viewBox="-259.404 -19.675 40.219 62.411"
                 enable-background="new -259.404 -19.675 40.219 62.411" xml:space="preserve">
@@ -154,7 +158,12 @@
           </td>
         </tr>
       </table>
-      <img src="./img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки" width="260" height="315">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+        <img src="./img/triple-set-mobile@1x.jpg" srcset="/img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки"
+          width="260" height="315">
+      </picture>
       <span class="week-goods__prise">
         Цена: 990 руб.
       </span>
@@ -319,7 +328,10 @@
             </div>
           </div>
           <div class="contacts__map">
-            <img src="./img/map-mobile@1x.jpg" alt="Мы на карте" width="322px" height="457px">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A40e90239098c4d6a46665cc9576a07ac2d862d4c5901a567232ae435b02cda59&amp;source=constructor"
+              width="322" height="454" frameborder="0">
+            </iframe>
           </div>
         </div> <a class="btn btn--main btn--size btn--center btn--contact" aria-label="Напишите нам">
           Напишите нам

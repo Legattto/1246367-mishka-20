@@ -17,19 +17,37 @@
 
 .page-header__logo {
   display: flex;
-  min-height: 89px;
-  justify-content: center;
+  height: 89px;
   border-bottom: 1px solid $color-gray-light;
+
+  picture {
+    margin: 22px auto;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
 
   @include tablet {
     position: absolute;
     left: 50px;
-    top: 0;
+    top: 22px;
     border: none;
+
+    img {
+      width: 113px;
+      height: 46px;
+    }
   }
 
   @include desktop {
     left: 50%;
     transform: translateX(-50%);
+    top: 10px;
+
+    img {
+      width: 149px;
+      height: 72px;
+    }
   }
 }
