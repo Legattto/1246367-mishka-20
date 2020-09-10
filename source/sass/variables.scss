@@ -12,7 +12,18 @@ $color-light-white:           #f9f9f9;
 $color-tiffany-icons:         #149080;
 $color-line:                  #e5e5e5;
 $color-social:                #231f20;
-$color-light-black:           #444444;
+$modal-border:                rgba(68, 68, 68, 0.1);
+$modal-border-hover:          rgba(68, 68, 68, 0.3);
+$color-modal-border:          #c6c6c6;
+$color-modal-boxshadow:       rgba(0, 1, 1, 0.25);
+
+//effects
+
+$text-hover__focus:           rgba(0, 0, 0, 0.6);
+$text-active:                 rgba(0, 0, 0, 0.3);
+$white-active:                rgba(255, 255, 255, 0.3);
+$social-hover:                #46c1ae;
+$catalog-hover:               rgba(0, 0, 0, 0.1);
 
 // background-color
 

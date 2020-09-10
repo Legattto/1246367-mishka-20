@@ -1,3 +1,9 @@
+.video {
+  @include desktop {
+    margin-top: 5px;
+  }
+}
+
 .video__grid-flex {
   @include tablet {
     display: flex;
@@ -23,15 +29,23 @@
     fill: $bg-tiffany;
     margin-left: 34px;
     margin-right: 25px;
+    margin-top: 32px;
+
+    @include tablet {
+      margin-left: 40px;
+      margin-right: 33px;
+      margin-top: 18px;
+    }
 
     @include desktop {
-      margin-left: 81px;
+      margin-left: 79px;
+      margin-top: -6px;
     }
   }
 
   @include tablet {
     order: 2;
-    padding-top: 41px;
+    padding-top: 18px;
   }
 
   @include desktop {
@@ -43,6 +57,10 @@
 
 .video__box {
   position: relative;
+
+  img {
+    object-fit: cover;
+  }
 
   @include tablet {
     order: 1;
@@ -91,13 +109,23 @@
   @include tablet {
     font-size: 15px;
     line-height: 30px;
-    padding-top: 24px;
     max-width: 580px;
+    padding-top: 0;
+    padding-left: 4px;
   }
 
   @include desktop {
-    margin-left: 0;
-    padding-top: 0;
-    margin-bottom: 51px;
+    margin-left: -7px;
+    margin-bottom: 53px;
+    margin-top: -12px;
+  }
+}
+
+.video__effects:hover,
+.video__effects-box:focus {
+  box-shadow: 0 6px 10px $catalog-hover;
+
+  &:active {
+    box-shadow: 0 3px 5px $catalog-hover;
   }
 }

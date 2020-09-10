@@ -14,16 +14,14 @@ body {
   height: 100%;
 }
 
-img,
-video,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
+a,
+button {
+  outline: none;
 }
 
-textarea {
-  resize: none;
+img,
+svg {
+  display: block;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs

@@ -7,13 +7,23 @@
   font-style: normal;
   font-weight: bold;
   background-color: $bg-light-white;
-  background-image: url("../../img/hero-mobile@1x.jpg");
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -16px;
+  background-position: 50% -17%;
+
+  @include retina {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: auto 373px;
+  }
 
   @include tablet {
-    background-image: url("../../img/hero-tablet@1x.jpg");
+    background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center;
+
+    @include retina {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: auto 746px;
+    }
   }
 }
 
@@ -25,7 +35,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-top: 73px;
+  margin-top: 70px;
   margin-bottom: 120px;
 
   @include tablet {
@@ -63,24 +73,76 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../../img/svg/bg-zigzag-fill.svg");
+      background-image: url("../img/svg/bg-zigzag-fill.svg");
       background-position: bottom;
       background-repeat: repeat-x;
       bottom: -10px;
       height: 24px;
       width: 100%;
+
+      @include desktop {
+        background-image: url("../img/svg/zigzag-fill-desktop.svg");
+        height: 34px;
+        bottom: -15px;
+      }
     }
   }
 }
 
 .services__list-item {
+  width: 100%;
+
+  @include tablet {
+    width: 50%;
+    display: flex;
+  }
+}
+
+.services__list-link {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  max-height: 103px;
+  min-height: 103px;
   margin: 0;
   position: relative;
+  background-color: $color-tiffany;
+
+  color: $font-white-color;
+  text-decoration: none;
+  min-width: 100%;
+  padding-left: 30px;
+  padding-top: 23px;
+  padding-bottom: 29px;
+
+  @include tablet {
+    padding-top: 18px;
+    min-height: 119px;
+    padding-right: 150px;
+    padding-left: 36px;
+  }
+
+  @include desktop {
+    padding-top: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    @include tablet {
+      transform: translateY(-5px);
+      max-height: 108px;
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
 
   svg {
     position: absolute;
@@ -88,50 +150,25 @@
     top: 20px;
     fill: $color-tiffany-icons;
     opacity: 0.5;
-  }
-
-  &:nth-child(2) {
-    svg {
-      right: 27px;
-
-      @include tablet {
-        right: 33px;
-      }
-
-      @include desktop {
-        right: 35px;
-      }
-    }
-  }
-
-  a {
-    color: $font-white-color;
-    text-decoration: none;
-    min-width: 100%;
-    min-height: 100%;
-    padding-left: 30px;
-    padding-top: 23px;
-    padding-bottom: 25px;
-    position: relative;
-    display: flex;
 
     @include tablet {
-      padding-top: 25px;
-      min-height: 119px;
-      padding-right: 150px;
-      padding-left: 36px;
+      top: 30px;
+    }
+  }
+}
+
+.services__list-link--even {
+  background-color: $color-dark-tiffany;
+
+  svg {
+    right: 27px;
+
+    @include tablet {
+      right: 33px;
     }
 
     @include desktop {
-      padding-top: 30px;
+      right: 35px;
     }
-  }
-
-  &:nth-child(odd) {
-    background-color: $bg-tiffany;
-  }
-
-  &:nth-child(even) {
-    background-color: $bg-dark-tiffany;
   }
 }

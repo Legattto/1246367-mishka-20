@@ -34,12 +34,12 @@
 
     @include desktop {
       margin-right: 63px;
-      margin-left: 47px;
+      margin-left: 60px;
     }
   }
 
   &--color {
-    margin-top: 31px;
+    margin-top: 25px;
     margin-bottom: 25px;
 
     @include tablet {
@@ -50,24 +50,24 @@
     }
 
     @include desktop {
-      margin-left: 97px;
+      margin-left: 110px;
       margin-right: 55px;
     }
   }
 
   &--name {
-    margin-top: 33px;
+    margin-top: 7px;
     margin-bottom: 28px;
 
     @include tablet {
       margin: 0;
       margin-top: 67px;
-      margin-right: 103px;
+      margin-right: 124px;
     }
 
     @include desktop {
-      margin-left: 47px;
-      margin-right: 60px;
+      margin-left: 60px;
+      margin-right: 70px;
     }
   }
 
@@ -91,6 +91,13 @@
       padding-top: 15px;
       padding-bottom: 19px;
     }
+
+    @include desktop {
+      margin-left: 112px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      margin-right: 60px;
+    }
   }
 
   &--add {
@@ -100,11 +107,12 @@
     @include tablet {
       margin: 0;
       margin-top: 19px;
-      margin-right: 100px;
+      margin-right: 128px;
     }
 
     @include desktop {
-      margin-left: 47px;
+      margin-left: 62px;
+      margin-right: 74px;
     }
   }
 
@@ -129,11 +137,13 @@
       margin-right: 79px;
       padding-top: 17px;
       padding-bottom: 17px;
-      width: 84px;
+      width: 92px;
     }
 
     @include desktop {
-      width: 100px;
+      width: 110px;
+      margin-left: 112px;
+      margin-right: 26px;
     }
   }
 }
@@ -157,7 +167,7 @@
     @include desktop {
       flex-direction: row;
       padding-top: 48px;
-      padding-bottom: 52px;
+      padding-bottom: 26px;
     }
   }
 
@@ -175,28 +185,49 @@
   position: relative;
 
   &--radio {
-    margin-bottom: 12px;
+    margin-top: 8px;
+    margin-bottom: 24px;
 
     @include tablet {
+      margin-bottom: 38px;
+      margin-left: 45px;
+      margin-top: -3px;
+    }
+
+    @include desktop {
       margin-bottom: 40px;
+      margin-left: 30px;
+    }
+
+    &:last-child {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
   &--checkbox {
-    margin-bottom: 33px;
+    margin-bottom: 25px;
 
     @include tablet {
-      width: 50%;
+      width: 41%;
+      margin-left: 26px;
+      margin-bottom: 40px;
+
+      &:nth-child(5n),
+      &:nth-child(6n) {
+        margin-bottom: 15px;
+      }
     }
 
     @include desktop {
-      width: 33%;
+      width: 26%;
+      margin-left: 17px;
     }
   }
 
   &--text {
     @include tablet {
-      margin-bottom: 58px;
+      margin-bottom: 3px;
 
       &:last-child {
         margin-bottom: 50px;
@@ -220,14 +251,14 @@
 
   &--phone {
     @include tablet {
-      padding-top: 46px;
-      padding-bottom: 47px;
+      padding-top: 48px;
+      padding-bottom: 21px;
     }
   }
 
   &--email {
     @include tablet {
-      padding-bottom: 69px;
+      padding-bottom: 50px;
     }
   }
 
@@ -247,6 +278,7 @@
   color: $font-heading-color;
   position: relative;
   min-height: 36px;
+  width: 100%;
 
   input::placeholder {
     font-size: 17px;
@@ -266,15 +298,17 @@
       content: "";
       position: absolute;
       left: 0;
-      top: -15px;
-      width: 42px;
-      height: 42px;
-      border: 2px solid $color-light-black;
+      top: -10px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $color-gray;
       border-radius: 50%;
 
       @include tablet {
         width: 52px;
         height: 52px;
+        top: -16px;
+        left: -16px;
       }
     }
   }
@@ -291,7 +325,7 @@
       top: 0;
       width: 38px;
       height: 38px;
-      border: 2px solid $color-light-black;
+      border: 2px solid $color-gray;
 
       @include tablet {
         width: 52px;
@@ -301,6 +335,7 @@
 
     @include tablet {
       padding-top: 15px;
+      padding-left: 81px;
     }
   }
 
@@ -312,8 +347,24 @@
       border: none;
       border-bottom: 2px solid $color-black;
       padding-top: 14px;
-      padding-bottom: 20px;
+      padding-bottom: 18px;
       width: 100%;
+      outline: none;
+
+      @include tablet {
+        padding-left: 24px;
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid $color-tiffany;
+      }
+
+      &:hover + svg,
+      &:focus + svg {
+        fill: $color-tiffany;
+        opacity: 1;
+      }
     }
 
     @include tablet {
@@ -331,6 +382,7 @@
   &--right-side {
     @include tablet {
       margin-right: 50px;
+      margin-left: 20px;
     }
 
     @include desktop {
@@ -347,19 +399,29 @@
   }
 
   textarea {
-    width: 260px;
+    min-width: 260px;
     min-height: 142px;
-    border: 2px solid $color-light-black;
+    border: 2px solid $color-gray;
     padding: 17px;
+    outline: none;
+    resize: none;
 
     @include tablet {
-      width: 526px;
-      height: 142px;
-      margin-bottom: 53px;
+      min-width: 500px;
+      min-height: 142px;
+      margin-bottom: 50px;
     }
 
     @include desktop {
-      width: 700px;
+      min-width: 700px;
+    }
+
+    &:hover {
+      border: 2px solid $color-tiffany;
+    }
+
+    &:focus {
+      border: 2px solid $color-tiffany;
     }
   }
 
@@ -385,8 +447,12 @@
 }
 
 .form-order__list--radio input:checked + label::before {
-  box-shadow: inset 0 0 0 13px $bg-white, inset 0 0 20px 20px $bg-tiffany;
+  box-shadow: inset 0 0 0 10px $bg-white, inset 0 0 20px 20px $bg-tiffany;
   outline: none;
+
+  @include tablet {
+    box-shadow: inset 0 0 0 14px $bg-white, inset 0 0 20px 20px $bg-tiffany;
+  }
 }
 
 .form-order__list--checkbox input:disabled + label,
@@ -429,6 +495,12 @@
 
     @include tablet {
       right: 26px;
+      top: 12px;
+    }
+
+    @include desktop {
+      right: 9px;
+      top: 12px;
     }
   }
 
@@ -437,7 +509,13 @@
     top: 11px;
 
     @include tablet {
-      right: 22px;
+      right: 26px;
+      top: 12px;
+    }
+
+    @include desktop {
+      right: 4px;
+      top: 12px;
     }
   }
 }
@@ -451,12 +529,13 @@
   line-height: 16px;
   display: block;
   margin-top: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @include tablet {
     right: 50px;
     font-size: 17px;
     line-height: 30px;
+    margin-top: 14px;
   }
 
   @include desktop {
@@ -472,11 +551,12 @@
   &--type {
     @include tablet {
       margin-top: 81px;
+      margin-bottom: 50px;
     }
 
     @include desktop {
-      margin-top: 62px;
-      margin-bottom: 49px;
+      margin-top: 80px;
+      margin-bottom: 50px;
     }
   }
 }
@@ -487,7 +567,7 @@
   }
 }
 
-.from-order__downbox {
+.form-order__downbox {
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -496,7 +576,8 @@
       order: 2;
 
       @include desktop {
-        margin-right: 160px;
+        margin-right: 176px;
+        margin-top: 8px;
       }
     }
 

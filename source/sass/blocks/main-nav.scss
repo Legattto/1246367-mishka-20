@@ -1,3 +1,7 @@
+.main-nav--hide {
+  display: none;
+}
+
 .main-nav {
   ul {
     align-self: flex-start;
@@ -7,7 +11,11 @@
   }
 
   li {
-    height: 89px;
+    height: 79px;
+
+    @include tablet {
+      height: 89px;
+    }
   }
 
   @include tablet {
@@ -23,7 +31,6 @@
   flex-direction: column;
 
   @include tablet {
-    width: 50%;
     flex-direction: row;
   }
 }
@@ -33,18 +40,26 @@
   display: flex;
   padding-left: 50px;
   padding-right: 20px;
-  height: 89px;
   border-bottom: 1px solid $color-gray-light;
 
   a {
     padding-top: 28px;
     padding-bottom: 26px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 26px;
 
     @include tablet {
       padding: 5px;
       padding-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-hover__focus;
+    }
+
+    &:active {
+      color: $text-active;
     }
   }
 
@@ -72,24 +87,88 @@
   }
 }
 
+.main-nav__help-item-search {
+  position: absolute;
+  fill: $color-black;
+  opacity: 0.2;
+  top: 32px;
+  left: 32px;
+
+  &:hover,
+  &:focus {
+    fill: $color-tiffany;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
+  @include tablet {
+    top: 36px;
+    left: 34px;
+  }
+}
+
 .main-nav__help-item {
   @include tablet {
     height: 89px;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 78px;
     font-size: 17px;
 
     &:first-child {
-      padding-left: 33px;
-      padding-right: 31px;
+      padding-left: 34px;
+      padding-right: 18px;
       border-right: 1px solid $color-gray-light;
       border-left: 1px solid $color-gray-light;
       justify-content: flex-start;
     }
   }
 
+  &--cart {
+    position: relative;
+    display: flex;
+
+    svg {
+      position: absolute;
+      opacity: 0.2;
+      top: 30px;
+      left: 31px;
+
+      @include tablet {
+        top: 35px;
+        left: 31px;
+      }
+    }
+  }
+
+  &--search {
+    position: relative;
+
+
+    @include tablet {
+      a {
+        width: 30px;
+        height: 30px;
+        padding: 15px;
+        z-index: 2;
+      }
+    }
+  }
+
   @include desktop {
     padding-left: 80px;
+  }
+
+  a:hover + svg,
+  a:focus + svg {
+    fill: $color-tiffany;
+    opacity: 1;
+  }
+
+  a:active + svg {
+    opacity: 0.3;
   }
 }
 
@@ -98,7 +177,7 @@
     padding-top: 15px;
     padding-right: 28px;
 
-    &:last-child {
+    &:nth-child(2n) {
       padding-right: 0;
     }
   }
@@ -107,21 +186,44 @@
     padding-right: 0;
     height: 89px;
     align-items: center;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    padding-left: 0;
+    padding-bottom: 14px;
 
     &:nth-child(1),
     &:nth-child(2) {
       font-size: 17px;
     }
 
-    &:first-child {
-      border-right: 1px solid $color-gray-light;
-      padding-right: 33px;
+    &:nth-child(2) {
+      @include desktop {
+        padding-left: 36px;
+      }
     }
 
-    &:last-child {
+    &:nth-child(3) {
+      @include desktop {
+        padding-top: 20px;
+      }
+    }
+
+    &:first-child {
+      border-right: 1px solid $color-gray-light;
+      padding-right: 35px;
+    }
+
+    &:nth-child(4) {
       padding-left: 45px;
+
+      @include desktop {
+        padding-left: 62px;
+        padding-top: 20px;
+      }
+    }
+
+    a {
+      @include desktop {
+        padding: 0;
+      }
     }
   }
 }
@@ -130,6 +232,7 @@
   @include tablet {
     transform: translateY(89px);
     font-size: 15px;
+    width: 47%;
   }
 
   @include desktop {
@@ -141,6 +244,7 @@
 .main-nav__help-list {
   @include tablet {
     justify-content: flex-end;
+    width: 53%;
   }
 
   @include desktop {
@@ -148,51 +252,12 @@
   }
 }
 
-.main-nav__help-item-search {
-  position: relative;
-
-  svg {
-    position: absolute;
-    fill: $color-black;
-    opacity: 0.2;
-    top: 30px;
-    left: -20px;
-  }
-
+.main-nav__help-item-span {
   @include tablet {
-    svg {
-      position: static;
-    }
-
-    span {
-      display: none;
-    }
+    display: none;
   }
 }
 
-.main-nav__help-item-cart {
-  position: relative;
-
-  &::before {
-    content: "";
-    background-image: url("../../img/svg/icon-cart.svg");
-    width: 21px;
-    height: 18px;
-    position: absolute;
-    top: 32px;
-    left: -20px;
-    fill: $color-black;
-    opacity: 0.2;
-  }
-
-  @include tablet {
-    &::before {
-      top: 10px;
-      left: -33px;
-    }
-  }
-}
-
-.main-nav_delivery-info {
+.main-nav__delivery-info {
   font-size: 15px;
 }
