@@ -130,21 +130,13 @@
 
   &--play {
     position: absolute;
-    top: 37px;
-    left: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100px;
     height: 76px;
     border: none;
     background: $bg-transperent;
-
-    @include tablet {
-      top: 189px;
-      left: 283px;
-    }
-
-    @include desktop {
-      left: 293px;
-    }
 
     &:hover,
     &:focus {
@@ -172,6 +164,7 @@
     @include desktop {
       width: 230px;
       margin-left: 0;
+      margin-bottom: 61px;
     }
   }
 

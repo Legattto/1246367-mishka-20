@@ -1,5 +1,6 @@
 .contacts {
   margin-top: 89px;
+  overflow: hidden;
 
   @include tablet {
     padding-top: 0;
