@@ -18,8 +18,10 @@
 
 .catalog-list__item {
   border: 1px solid $color-gray-light;
+  margin: 0 auto;
   margin-bottom: 30px;
-  max-width: 400px;
+  max-width: 260px;
+  width: 100%;
 
   @include tablet {
     img {
@@ -27,8 +29,8 @@
       height: 335px;
     }
 
-    max-width: 635px;
-    margin-bottom: 53px;
+    max-width: 668px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
   }
@@ -51,18 +53,25 @@
 }
 
 .catalog-list__item-box {
-  margin-top: 27px;
+  margin-top: 26px;
   display: flex;
   flex-direction: column;
-
-  @include tablet {
-    width: 56%;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+  padding-left: 28px;
+  padding-right: 27px;
 
   @include tablet {
     width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $catalog-hover;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $catalog-hover;
   }
 }
 
@@ -74,7 +83,7 @@
   justify-content: space-between;
 
   @include tablet {
-    margin-top: 23px;
+    margin-top: 27px;
     margin-bottom: 25px;
   }
 }
@@ -84,14 +93,25 @@
   font-size: 17px;
   line-height: 24px;
   color: $font-heading-color;
+  cursor: pointer;
 
   @include tablet {
     font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .catalog-list__item-description {
   font-size: 13px;
+  padding-top: 6px;
   padding-bottom: 17px;
   border-bottom: 1px solid $color-line;
 
@@ -103,13 +123,18 @@
   @include desktop {
     padding-bottom: 35px;
   }
+}
 
-  &--toy {
-    @include desktop {
-      padding-bottom: 12px;
-    }
+.catalog-list__item-description--toy {
+  @include tablet {
+    padding-bottom: 148px;
+  }
+
+  @include desktop {
+    padding-bottom: 10px;
   }
 }
+
 
 .catalog-list__item-prise {
   line-height: 24px;
@@ -120,4 +145,18 @@
 .catalog-list__item-order {
   text-decoration: none;
   color: $font-base-color;
+
+  svg {
+    opacity: 0.2;
+
+    &:hover,
+    &:focus {
+      fill: $color-tiffany;
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

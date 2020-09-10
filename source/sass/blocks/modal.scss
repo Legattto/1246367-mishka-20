@@ -1,0 +1,137 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal--active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: $bg-transperent;
+}
+
+.modal__container {
+  width: 320px;
+  height: 336px;
+  border: 1px solid $color-modal-border;
+  box-shadow: 0 5px 10px $color-modal-boxshadow;
+  background-color: $bg-white;
+
+  @include tablet {
+    width: 566px;
+  }
+}
+
+.modal__caption {
+  max-width: 135px;
+  margin: 28px auto 14px auto;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: $color-black;
+
+  @include tablet {
+    max-width: 321px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__text {
+  display: flex;
+  font-size: 15px;
+  line-height: 30px;
+  color: $font-base-color;
+  margin: 0 90px;
+  padding: 0;
+
+  @include tablet {
+    margin: 0 193px;
+  }
+}
+
+.modal__label {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $color-black;
+  text-transform: uppercase;
+  width: 82px;
+  height: 52px;
+  border: 2px solid $modal-border;
+  display: flex;
+
+  @include tablet {
+    width: 112px;
+  }
+}
+
+.modal__scription {
+  display: block;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.modal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 31px;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+
+  @include tablet {
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+}
+
+.modal__item {
+  margin-right: 7px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.modal__button {
+  background-color: $color-tiffany;
+  color: $color-white;
+  font-size: 17px;
+  line-height: 16px;
+  padding: 12px 70px;
+  border: none;
+  margin: 0 auto;
+  outline: auto;
+
+  @include tablet {
+    width: 350px;
+  }
+}
+
+.modal__item input:hover + label {
+  border: 2px solid $modal-border-hover;
+}
+
+.modal__item input:focus + label {
+  border: 2px solid $color-tiffany;
+}
+
+.modal__item input:checked:focus + label {
+  border: 2px solid $color-tiffany;
+}

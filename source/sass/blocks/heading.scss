@@ -11,8 +11,8 @@
     font-size: 18px;
 
     @include tablet {
-      margin-top: 30px;
-      margin-bottom: 30px;
+      margin-top: 11px;
+      margin-bottom: 26px;
     }
   }
 
@@ -27,17 +27,45 @@
     z-index: -100;
 
     @include tablet {
+      padding-top: 100px;
+      padding-bottom: 87px;
+
       &::before {
         content: "";
         position: absolute;
-        background-image: url("../../img/svg/bg-zigzag-fill.svg");
+        background-image: url("../img/svg/bg-zigzag-fill.svg");
         background-position: bottom;
         background-repeat: repeat-x;
         left: 0;
-        bottom: -10px;
+        bottom: 0;
         height: 24px;
         width: 100%;
+
+        @include desktop {
+          background-image: url("../img/svg/zigzag-fill-desktop-catalog.svg");
+          height: 34px;
+          bottom: -15px;
+        }
       }
+    }
+
+    @include desktop {
+      padding-bottom: 100px;
+      margin-bottom: 124px;
+    }
+  }
+
+  &--bg-from {
+    padding: 72px 30px;
+
+    @include tablet {
+      padding-top: 100px;
+      padding-bottom: 90px;
+    }
+
+    @include desktop {
+      padding-bottom: 100px;
+      margin-bottom: 114px;
     }
   }
 
@@ -50,12 +78,12 @@
     @include tablet {
       &::after {
         content: "";
-        background-image: url("../../img/svg/icon-flag.svg");
+        background-image: url("../img/svg/icon-flag.svg");
         width: 47px;
         height: 81px;
         position: absolute;
         top: -20px;
-        right: 0;
+        right: 4px;
 
         @include desktop {
           left: -111px;
@@ -67,6 +95,7 @@
   &--grid {
     @include tablet {
       grid-area: hd;
+      margin-top: 23px;
     }
   }
 

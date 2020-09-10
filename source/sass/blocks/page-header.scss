@@ -17,7 +17,7 @@
 
 .page-header__logo {
   display: flex;
-  height: 89px;
+  height: 80px;
   border-bottom: 1px solid $color-gray-light;
 
   picture {
@@ -48,6 +48,21 @@
     img {
       width: 149px;
       height: 72px;
+    }
+  }
+
+  &--index {
+    pointer-events: none;
+  }
+
+  &--effects {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

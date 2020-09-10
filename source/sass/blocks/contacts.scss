@@ -1,13 +1,12 @@
 .contacts {
-  margin-top: 45px;
-  padding-top: 38px;
+  margin-top: 89px;
 
   @include tablet {
     padding-top: 0;
     margin-top: 140px;
 
     @include desktop {
-      margin-top: 170px;
+      margin-top: 186px;
     }
   }
 
@@ -49,10 +48,12 @@
 
 .contacts__box-item {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  margin-top: 26px;
 
   span {
-    margin-right: 30px;
+    margin-right: 24px;
+    width: 54px;
   }
 
   a {
@@ -72,6 +73,12 @@
   @include tablet {
     margin-right: 50px;
   }
+
+  @include desktop {
+    margin-right: 61px;
+    margin-bottom: 18px;
+    margin-top: 11px;
+  }
 }
 
 .contacts__wrapper {
@@ -81,16 +88,84 @@
 }
 
 .contacts__map {
-  overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
-  height: 0;
+  height: 454px;
+  width: 100vw;
+  margin-left: -30px;
+  margin-bottom: 41px;
+  margin-top: 28px;
+
+  @include tablet {
+    margin-left: -50px;
+    margin-bottom: 55px;
+    margin-top: 44px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: -16px;
+  }
 
   iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
     width: 100%;
+  }
+
+  picture {
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.contacts__email {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 179px;
+    background-color: $bg-tiffany;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include tablet {
+      width: 204px;
+      bottom: 60px;
+    }
+
+    @include desktop {
+      bottom: -4px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-tiffany;
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
+  }
+}
+
+.contacts__box-wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+.conntacts__box-br {
+  @include tablet {
+    display: none;
   }
 }

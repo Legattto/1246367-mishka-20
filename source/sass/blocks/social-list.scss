@@ -15,9 +15,10 @@
 
 .social-list__item {
   max-width: 25px;
-  height: auto;
+  height: 82px;
   margin-right: 40px;
   align-items: center;
+  margin-top: -4px;
 
   svg {
     fill: $color-social;
@@ -31,5 +32,16 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $social-hover;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
