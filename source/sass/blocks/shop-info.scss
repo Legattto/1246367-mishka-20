@@ -1,8 +1,6 @@
 .shop-info {
   position: relative;
   padding-top: 37px;
-  margin: 0 auto;
-  max-width: 320px;
 
   &::before {
     content: "";
@@ -33,45 +31,24 @@
     }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../../img/svg/zigzag-line-mobile.svg");
-    background-color: $bg-transperent;
-    background-repeat: repeat-x;
-    bottom: -653px;
-    width: 100%;
-    height: 6px;
-    fill: $color-dark-white;
-
-    @include tablet {
-      background-image: url("../../img/svg/zigzag-line-tablet.svg");
-      height: 17px;
-      bottom: -590px;
-    }
-
-    @include desktop {
-      max-width: 1052px;
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-      background-image: url("../../img/svg/zigzag-line-desktop.svg.svg");
-      height: 23px;
-      bottom: -600px;
-      left: 49px;
-    }
-  }
-
   @include tablet {
     position: relative;
     padding-top: 72px;
-    max-width: 768px;
     margin-bottom: 48px;
   }
 
   @include desktop {
     max-width: 1150px;
     padding-top: 108px;
+  }
+}
+
+.shop-info__box {
+  margin: 0 auto;
+  width: 320px;
+
+  @include tablet {
+    width: 100%;
   }
 }
 
@@ -87,10 +64,11 @@
 
     &--flower {
       margin-left: 10px;
+      margin-bottom: 17px;
     }
 
     &--money {
-      margin-top: -5px;
+      margin-top: 0;
       margin-bottom: 26px;
 
       @include tablet {
@@ -100,17 +78,18 @@
 
     &--heart {
       margin-left: 7px;
-      margin-top: 1px;
-      margin-bottom: 22px;
+      margin-top: 3px;
+      margin-bottom: 23px;
 
       @include tablet {
-        margin-top: 36px;
+        margin-top: 32px;
       }
     }
 
     &--ball {
       margin-left: 3px;
-      margin-bottom: 17px;
+      margin-bottom: 18px;
+      margin-top: 0;
 
       @include tablet {
         margin-left: -6px;

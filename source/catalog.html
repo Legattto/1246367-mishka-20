@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>Каталог</title>
 </head>
-
 <body>
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
-
   <header class="page-header">
     <a href="index.html" class="page-header__logo page-header__logo--effects" aria-label="Логотип компании Mishka">
       <picture>
@@ -33,29 +32,29 @@
       <nav class="page-header__nav main-nav js-nav">
         <ul class="main-nav__main-list">
           <li class="main-nav__main-item">
-            <a href="catalog.html" aria-label="Переход в каталог товаров">
+            <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
           <li class="main-nav__main-item">
-            <a href="form.html" aria-label="Переход на форму заказа">
-              Вязяние на заказ
+            <a href="form.html">
+              Вязание на заказ
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход на страницу новых товаров">
+            <a href="#">
               Новые поступления
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход в страницу распродажи">
+            <a href="#">
               Распродажа
             </a>
           </li>
         </ul>
         <ul class="main-nav__help-list">
           <li class="main-nav__help-item main-nav__help-item--search">
-            <a href="#" aria-label="Переход на страницу поиска">
+            <a href="#">
               <span class="main-nav__help-item-span">Поиск по сайту</span>
             </a>
             <svg class="main-nav__help-item-search" width="17" height="17">
@@ -63,7 +62,7 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--cart">
-            <a class="main-nav__help-item-cart" href="#" aria-label="Переход в корзину">
+            <a class="main-nav__help-item-cart" href="#">
               <span>Корзина: пока пуста</span>
             </a>
             <svg width="20" height="18">
@@ -71,15 +70,14 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--tablet">
-            <span class="main-nav_delivery-info">
+            <a class="main-nav__delivery-info">
               Бесплатная доставка по России
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main class="page-main">
     <section>
       <h2 class="heading heading--big heading--bg">
@@ -88,20 +86,22 @@
       <div class="container">
         <ul class="catalog-list">
           <li class="catalog-list__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)"
-                srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
-              <source media="(min-width: 1150px)"
-                srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-              <source media="(min-width: 320px)"
-                srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
-              <img src="./img/photo-hare-mobile@1x.jpg" srcset="/img/photo-hare-mobile@2x.jpg 2x" alt="Игрушка зайчик"
-                width="260" height="195">
-            </picture>
+            <a href="#" class="catalog-list__item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
+                <img src="./img/photo-hare-mobile@1x.jpg" srcset="/img/photo-hare-mobile@2x.jpg 2x" alt="Игрушка зайчик"
+                  width="260" height="195">
+              </picture>
+            </a>
             <div class="catalog-list__item-box">
               <a class="catalog-list__item-name">
                 Зайчик-попрыгайчик
@@ -111,7 +111,7 @@
               </span>
               <div class="catalog-list__item-prise-box">
                 <span class="catalog-list__item-prise">
-                  1200 руб.
+                  1 200 руб.
                 </span>
                 <a href="#" class="catalog-list__item-order js-order" aria-label="Добавить товар в корзину">
                   <svg width="20" height="18">
@@ -122,25 +122,27 @@
             </div>
           </li>
           <li class="catalog-list__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)"
-                srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
-              <source media="(min-width: 1150px)"
-                srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-              <source type="image/webp" media="(min-width: 320px)"
-                srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
-              <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Игрушка зайчик"
-                width="260" height="195">
-            </picture>
+            <a href="#" class="catalog-list__item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 320px)"
+                  srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
+                <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Игрушка зайчик"
+                  width="260" height="195">
+              </picture>
+            </a>
             <div class="catalog-list__item-box">
               <a class="catalog-list__item-name">
                 Корзинка для белья
               </a>
-              <span class="catalog-list__item-description">
+              <span class="catalog-list__item-description catalog-list__item-description--tablet">
                 Диаметр 15 см, высота 10 см
               </span>
               <div class="catalog-list__item-prise-box">
@@ -156,20 +158,22 @@
             </div>
           </li>
           <li class="catalog-list__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)"
-                srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@1x.webp 2x">
-              <source media="(min-width: 1150px)"
-                srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@1x.jpg 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@1x.webp 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@1x.jpg 2x">
-              <source media="(min-width: 320px)"
-                srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@1x.webp 2x">
-              <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Игрушка зайчик"
-                width="260" height="195">
-            </picture>
+            <a href="#" class="catalog-list__item-img">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@1x.webp 2x">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@1x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@1x.webp 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@1x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@1x.webp 2x">
+                <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Игрушка зайчик"
+                  width="260" height="195">
+              </picture>
+            </a>
             <div class="catalog-list__item-box">
               <a class="catalog-list__item-name">
                 Большая корзинка для&nbsp;игрушек
@@ -179,7 +183,7 @@
               </span>
               <div class="catalog-list__item-prise-box">
                 <span class="catalog-list__item-prise">
-                  1500 руб.
+                  1 500 руб.
                 </span>
                 <a href="#" class="catalog-list__item-order js-order" aria-label="Добавить товар в корзину">
                   <svg width="20" height="18">
@@ -192,7 +196,6 @@
         </ul>
       </div>
     </section>
-
     <section class="video">
       <div class="container">
         <div class="video__grid-flex">
@@ -211,7 +214,7 @@
               <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" class="video__play-video"
                 width="260" height="150" alt="Процесс производства">
             </picture>
-            <button class="btn btn--play">
+            <button type="button" class="btn btn--play">
               <svg width="100" height="76">
                 <use xlink:href="#icon-play"></use>
               </svg>
@@ -228,12 +231,9 @@
             </div>
             <div class="video__foot-box">
               <p class="video__text">
-                По просьбам наших любимых
-                фоловеров мы сняли для вас
-                подробное видио о том, как
-                появляются наши товары.
+                По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
               </p>
-              <a href="#" class="btn btn--effect btn--main btn--video" aria-label="Кнопка сделать заказ">
+              <a href="#" class="btn btn--effect btn--main btn--video">
                 Сделать заказ
               </a>
             </div>
@@ -241,9 +241,7 @@
         </div>
       </div>
     </section>
-
   </main>
-
   <footer class="page-footer page-footer--catalog">
     <div class="page-footer__flex container">
       <a href="index.html" class="page-footer__logo">
@@ -275,19 +273,18 @@
         </li>
       </ul>
       <div class="page-footer__wrapper">
-        <span class="page-footer__autor">
+        <span class="page-footer__author">
           Разработано
         </span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__author-link"
           aria-label="Логотип HTML academy">
-          <svg width="27" height="35">
+          <svg class="page-footer__author-svg" width="27" height="35">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
-
   <div class="modal">
     <div class="modal__overlay"></div>
     <div class="modal__container">
@@ -298,21 +295,19 @@
           <li class="modal__item">
             <input class="visually-hidden" type="radio" name="size" value="size_s" id="size_s" checked />
             <label for="size_s" class="modal__label">
-              <span class="modal__scription">s</span>
+              <span class="modal__size">s</span>
             </label>
           </li>
-
           <li class="modal__item">
             <input class="visually-hidden" type="radio" name="size" value="size_m" id="size_m" />
             <label for="size_m" class="modal__label">
-              <span class="modal__scription">m</span>
+              <span class="modal__size">m</span>
             </label>
           </li>
-
           <li class="modal__item">
             <input class="visually-hidden" type="radio" name="size" value="size_l" id="size_l" />
             <label for="size_l" class="modal__label">
-              <span class="modal__scription">l</span>
+              <span class="modal__size">l</span>
             </label>
           </li>
         </ul>
@@ -320,8 +315,6 @@
       </form>
     </div>
   </div>
-
   <script src="js/index.min.js"></script>
 </body>
-
 </html>

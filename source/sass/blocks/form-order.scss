@@ -67,7 +67,8 @@
 
     @include desktop {
       margin-left: 60px;
-      margin-right: 70px;
+      margin-right: 74px;
+      margin-top: 69px;
     }
   }
 
@@ -88,7 +89,7 @@
   &--phone {
     @include tablet {
       margin-right: 105px;
-      padding-top: 15px;
+      padding-top: 18px;
       padding-bottom: 19px;
     }
 
@@ -135,7 +136,7 @@
 
     @include tablet {
       margin-right: 79px;
-      padding-top: 17px;
+      padding-top: 20px;
       padding-bottom: 17px;
       width: 92px;
     }
@@ -161,7 +162,7 @@
       flex-direction: row;
       width: 100%;
       padding-top: 50px;
-      padding-bottom: 50px;
+      padding-bottom: 35px;
     }
 
     @include desktop {
@@ -211,7 +212,7 @@
     @include tablet {
       width: 41%;
       margin-left: 26px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
 
       &:nth-child(5n),
       &:nth-child(6n) {
@@ -266,7 +267,7 @@
     @include tablet {
       position: relative;
       background-color: $color-white;
-      padding-top: 50px;
+      padding-top: 51px;
     }
   }
 }
@@ -283,6 +284,7 @@
   input::placeholder {
     font-size: 17px;
     line-height: 18px;
+    color: $color-black;
     opacity: 0.3;
 
     @include tablet {
@@ -311,11 +313,17 @@
         left: -16px;
       }
     }
+
+    @include desktop {
+      padding-left: 65px;
+    }
   }
 
   &--checkbox {
     padding-left: 62px;
     padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 8px;
     cursor: pointer;
 
     &::before {
@@ -334,8 +342,14 @@
     }
 
     @include tablet {
-      padding-top: 15px;
+      padding-top: 17px;
+      padding-bottom: 16px;
       padding-left: 81px;
+    }
+
+    @include desktop {
+      padding-top: 19px;
+      padding-bottom: 14px;
     }
   }
 
@@ -346,13 +360,13 @@
     input {
       border: none;
       border-bottom: 2px solid $color-black;
-      padding-top: 14px;
-      padding-bottom: 18px;
+      padding-top: 19px;
+      padding-bottom: 13px;
       width: 100%;
       outline: none;
 
       @include tablet {
-        padding-left: 24px;
+        padding-left: 20px;
       }
 
       &:hover,
@@ -375,6 +389,28 @@
         padding-top: 18px;
         padding-bottom: 16px;
         padding-right: 24px;
+
+        @include desktop {
+          padding-bottom: 17px;
+        }
+      }
+    }
+  }
+
+  &--text-pad {
+    @include tablet {
+      input {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &--phone-mail {
+    @include tablet {
+      input {
+        padding-left: 17px;
+        padding-top: 16px;
+        padding-bottom: 15px;
       }
     }
   }
@@ -382,11 +418,12 @@
   &--right-side {
     @include tablet {
       margin-right: 50px;
-      margin-left: 20px;
+      margin-left: 30px;
     }
 
     @include desktop {
       margin-right: 225px;
+      margin-left: 20px;
     }
   }
 
@@ -405,15 +442,18 @@
     padding: 17px;
     outline: none;
     resize: none;
+    width: 100%;
 
     @include tablet {
       min-width: 500px;
       min-height: 142px;
+      padding: 14px;
       margin-bottom: 50px;
     }
 
     @include desktop {
-      min-width: 700px;
+      width: 700px;
+      margin-bottom: 46px;
     }
 
     &:hover {
@@ -457,7 +497,13 @@
 
 .form-order__list--checkbox input:disabled + label,
 .form-order__list--radio input:disabled + label::before {
-  opacity: 0.5;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.form-order__list--checkbox input:checked:disabled + label,
+.form-order__list--radio input:disabled:checked + label::before {
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -465,21 +511,21 @@
   &::after {
     content: "";
     position: absolute;
-    top: 45%;
-    left: 13px;
+    top: 5px;
+    left: 14px;
     width: 11px;
     height: 20px;
-    transform: translateY(-50%) skewX(6deg) rotate(48deg);
+    transform: skewX(6deg) rotate(48deg);
 
     border-bottom: 2px solid $color-black;
     border-right: 2px solid $color-black;
 
     @include tablet {
-      top: 60%;
-      left: 18px;
+      top: 7px;
+      left: 17px;
       width: 17px;
       height: 30px;
-      transform: translateY(-50%) skewX(-3deg) rotate(44deg);
+      transform: skewX(-3deg) rotate(44deg);
     }
   }
 }
@@ -490,7 +536,7 @@
   opacity: 0.2;
 
   &--phone {
-    right: 0;
+    right: 7px;
     top: 11px;
 
     @include tablet {
@@ -509,7 +555,7 @@
     top: 11px;
 
     @include tablet {
-      right: 26px;
+      right: 22px;
       top: 12px;
     }
 
@@ -522,6 +568,10 @@
 
 .form-order__list-item-span {
   margin-top: 21px;
+
+  @include desktop {
+    margin-top: 20px;
+  }
 }
 
 .form-order__addition {
@@ -577,7 +627,7 @@
 
       @include desktop {
         margin-right: 176px;
-        margin-top: 8px;
+        margin-top: 14px;
       }
     }
 

@@ -35,7 +35,6 @@
 .page-footer__flex {
   @include tablet {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -43,13 +42,14 @@
   list-style: none;
 }
 
-.page-footer__autor {
+.page-footer__author {
   font-weight: bold;
   font-size: 19px;
   line-height: 18px;
+  color: $font-heading-color;
 }
 
-.page-footer__autor-link {
+.page-footer__author-link {
   svg {
     fill: $color-tiffany;
   }
@@ -102,6 +102,10 @@
     margin: 0;
   }
 
+  @include desktop {
+    width: 200px;
+  }
+
   span {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -110,13 +114,17 @@
     @include tablet {
       margin-top: 31px;
       margin-bottom: 43px;
-      margin-right: 26px;
+      margin-right: 29px;
     }
   }
 }
 
-.page-footer__autor-svg {
+.page-footer__author-svg {
   @include tablet {
     margin-top: -10px;
+  }
+
+  @include desktop {
+    margin-top: -7px;
   }
 }

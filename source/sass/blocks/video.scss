@@ -5,7 +5,12 @@
 }
 
 .video__grid-flex {
+  width: 260px;
+  margin: 0 auto;
+
   @include tablet {
+    width: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -28,8 +33,8 @@
   svg {
     fill: $bg-tiffany;
     margin-left: 34px;
-    margin-right: 25px;
-    margin-top: 32px;
+    margin-right: 29px;
+    margin-top: 29px;
 
     @include tablet {
       margin-left: 40px;
@@ -120,9 +125,10 @@
   @include tablet {
     font-size: 15px;
     line-height: 30px;
-    max-width: 580px;
+    max-width: 600px;
     padding-top: 0;
     padding-left: 4px;
+    margin-bottom: 41px;
   }
 
   @include desktop {

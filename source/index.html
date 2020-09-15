@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>Магазин-Mishka</title>
-  <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
-
   <header class="page-header">
     <a class="page-header__logo page-header__logo--index" aria-label="Логотип компании Mishka">
       <picture>
@@ -33,29 +32,29 @@
       <nav class="page-header__nav main-nav js-nav">
         <ul class="main-nav__main-list">
           <li class="main-nav__main-item">
-            <a href="catalog.html" aria-label="Переход в каталог товаров">
+            <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
           <li class="main-nav__main-item">
-            <a href="form.html" aria-label="Переход на форму заказа">
-              Вязяние на заказ
+            <a href="form.html">
+              Вязание на заказ
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход на страницу новых товаров">
+            <a href="#">
               Новые поступления
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход в страницу распродажи">
+            <a href="#">
               Распродажа
             </a>
           </li>
         </ul>
         <ul class="main-nav__help-list">
           <li class="main-nav__help-item main-nav__help-item--search">
-            <a href="#" aria-label="Переход на страницу поиска">
+            <a href="#">
               <span class="main-nav__help-item-span">Поиск по сайту</span>
             </a>
             <svg class="main-nav__help-item-search" width="17" height="17">
@@ -63,7 +62,7 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--cart">
-            <a class="main-nav__help-item-cart" href="#" aria-label="Переход в корзину">
+            <a class="main-nav__help-item-cart" href="#">
               <span>Корзина: пока пуста</span>
             </a>
             <svg width="20" height="18">
@@ -71,24 +70,20 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--tablet">
-            <span class="main-nav__delivery-info">
+            <a class="main-nav__delivery-info">
               Бесплатная доставка по России
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main class="page-main">
     <h1 class="visually-hidden">Магазин Mishka товары для дома </h1>
-
     <section class="services">
       <div class="container container--no-mobile-padding">
         <h2 class="services__slogan">
-          Милые штучки
-          ручной
-          работы&nbsp;для&nbsp;дома
+          Милые штуки ручной работы&nbsp;для&nbsp;дома
         </h2>
         <ul class="services__list">
           <li class="services__list-item">
@@ -114,7 +109,6 @@
         </ul>
       </div>
     </section>
-
     <section class="week-goods container">
       <div class="week-goods__wrap">
         <h2 class="heading">
@@ -125,8 +119,7 @@
         </span>
       </div>
       <p class="week-goods__text">
-        Экологически чистая пряжа, ручная работа. Доступны в шести
-        расцветках, и трех размерах.
+        Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
       </p>
       <table class="week-goods__table">
         <tr class="week-goods__table-row">
@@ -172,9 +165,8 @@
         Заказать
       </a>
     </section>
-
     <section class="shop-info">
-      <div class="container container--desktop">
+      <div class="shop-info__box container container--desktop">
         <h2 class="heading">
           Коротко о нас:
         </h2>
@@ -201,7 +193,7 @@
             <svg class="shop-info__list-item-svg shop-info__list-item-svg--ball" width="34" height="34">
               <use xlink:href="#icon-feature-ball"></use>
             </svg>
-            <span class="shop-info__list-item-ball">Связано в ручную с любовью&nbsp;и умилением</span>
+            <span class="shop-info__list-item-ball">Связано вручную с любовью&nbsp;и умилением</span>
           </li>
           <li class="shop-info__list-item">
             <svg class="shop-info__list-item-svg shop-info__list-item-svg--rocket" width="54" height="23">
@@ -218,7 +210,6 @@
         </ul>
       </div>
     </section>
-
     <section class="reviews container container--desktop">
       <div class="reviews__grid">
         <h2 class="heading heading--grid">
@@ -227,15 +218,7 @@
         <ul class="reviews__slider">
           <li class="reviews__slider-item">
             <p class="reviews__comment">
-              Я молодая мама, но все равно
-              фотографии не набирали и близко
-              такого количества лайков, как у
-              популярных инстамамочек. В
-              отчаянии, я накупила аксесуаров
-              и игрушек в Мишке, и мои
-              фотографии сразу стали более
-              стильными, а так же набирают
-              больше лайков!
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
             <div class="reviews__box">
               <span class="reviews__name">
@@ -259,12 +242,11 @@
             </svg>
           </button>
         </div>
-        <a href="#" class="btn btn--effect btn--main btn--grid" aria-label="Написать отзыв">
+        <a href="#" class="btn btn--effect btn--main btn--grid btn--center" aria-label="Написать отзыв">
           Написать
         </a>
       </div>
     </section>
-
     <section class="contacts">
       <div class="container container--desktop">
         <div class="contacts__wrapper">
@@ -283,7 +265,7 @@
                 <span>адрес:</span>
                 <address>
                   г. Санкт-Петербург,<br>
-                  ул.&nbsp;Большая<br class="conntacts__box-br">&nbsp;Конюшенная,
+                  ул.&nbsp;Большая<br class="conntacts__box-br"> Конюшенная,
                   д.&nbsp;19/8, офис 101
                 </address>
               </div>
@@ -295,8 +277,8 @@
                 srcset="img/map-desktop@1x.jpg.webp 1x, img/map-desktop@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/map-tablet@1x.jpg.webp 1x, img/map-tablet@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg.jpg 1x, img/map-tablet@2x.jpg2x">
+                srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
               <source media="(min-width: 320px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
               <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург,
                 ул. Большая Конюшенная,
@@ -307,14 +289,12 @@
               width="322" height="454" frameborder="0">
             </iframe>
           </div>
-        </div> <a class="btn  btn--effect btn--main btn--size btn--center btn--contact" aria-label="Напишите нам">
+        </div> <a class="btn  btn--effect btn--main btn--size btn--center btn--contact">
           Напишите нам
         </a>
       </div>
     </section>
-
   </main>
-
   <footer class="page-footer">
     <div class="page-footer__flex container">
       <a class="page-footer__logo page-footer__logo--index">
@@ -346,53 +326,48 @@
         </li>
       </ul>
       <div class="page-footer__wrapper">
-        <span class="page-footer__autor">
+        <span class="page-footer__author">
           Разработано
         </span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__author-link"
           aria-label="Логотип HTML academy">
-          <svg class="page-footer__autor-svg" width="27" height="35">
+          <svg class="page-footer__author-svg" width="27" height="35">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
-
   <div class="modal">
     <div class="modal__overlay"></div>
     <div class="modal__container">
       <form class="modal__cartfill" action="https://echo.htmlacademy.ru" method="get">
-      <h3 class="modal__caption">Добавить в&nbsp;корзину</h3>
-      <p class="modal__text">Выберите размер:</p>
-      <ul class="modal__list">
-        <li class="modal__item">
-          <input class="visually-hidden" type="radio" name="size" value="size_s" id="size_s" checked />
-          <label for="size_s" class="modal__label">
-            <span class="modal__scription">s</span>
-          </label>
-        </li>
-
-        <li class="modal__item">
-          <input class="visually-hidden" type="radio" name="size" value="size_m" id="size_m" />
-          <label for="size_m" class="modal__label">
-            <span class="modal__scription">m</span>
-          </label>
-        </li>
-
-        <li class="modal__item">
-          <input class="visually-hidden" type="radio" name="size" value="size_l" id="size_l" />
-          <label for="size_l" class="modal__label">
-            <span class="modal__scription">l</span>
-          </label>
-        </li>
-      </ul>
-      <button class="btn btn--main modal__button" type="submit">Добавить</button>
+        <h3 class="modal__caption">Добавить в&nbsp;корзину</h3>
+        <p class="modal__text">Выберите размер:</p>
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="visually-hidden" type="radio" name="size" value="size_s" id="size_s" checked />
+            <label for="size_s" class="modal__label">
+              <span class="modal__size">s</span>
+            </label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden" type="radio" name="size" value="size_m" id="size_m" />
+            <label for="size_m" class="modal__label">
+              <span class="modal__size">m</span>
+            </label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden" type="radio" name="size" value="size_l" id="size_l" />
+            <label for="size_l" class="modal__label">
+              <span class="modal__size">l</span>
+            </label>
+          </li>
+        </ul>
+        <button class="btn btn--main modal__button" type="submit">Добавить</button>
       </form>
     </div>
   </div>
-
   <script src="js/index.min.js"></script>
 </body>
-
 </html>

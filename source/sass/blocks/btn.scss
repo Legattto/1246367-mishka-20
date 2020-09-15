@@ -16,7 +16,7 @@
     font-size: 18px;
     line-height: 20px;
     text-align: center;
-    padding: 14px 80px;
+    padding: 15px 80px;
   }
 
   &--arrow {
@@ -49,21 +49,6 @@
 
   &--hide {
     display: none;
-  }
-
-  &--grid {
-    @include tablet {
-      align-self: flex-start;
-      padding: 14px 26px;
-      width: 175px;
-      grid-area: btn;
-      margin-top: 20px;
-    }
-
-    @include desktop {
-      margin-top: 26px;
-      margin-left: 53px;
-    }
   }
 
   &--size {
@@ -108,23 +93,16 @@
   }
 
   &--form {
+    font-size: 17px;
+    line-height: 16px;
+    padding-top: 18px;
+
     @include tablet {
       width: 230px;
     }
 
     @include desktop {
       margin-left: 175px;
-    }
-  }
-
-  &--center {
-    @include tablet {
-      margin: 0 auto;
-    }
-
-    @include desktop {
-      margin-left: 1px;
-      width: 230px;
     }
   }
 
@@ -140,17 +118,17 @@
 
     &:hover,
     &:focus {
-      transform: scale(1.2);
+      transform: scale(1.2) translate(-50%, -50%);
     }
 
     &:active {
-      transform: scale(0.8);
+      transform: scale(0.8) translate(-50%, -50%);
       opacity: 0.5;
     }
   }
 
   &--video {
-    padding: 16px 20px;
+    padding: 14px 20px;
     width: 192px;
     margin: 0 auto 31px auto;
 
@@ -159,6 +137,8 @@
       margin-bottom: 46px;
       font-size: 17px;
       line-height: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
 
     @include desktop {
@@ -183,6 +163,30 @@
       position: absolute;
       bottom: 0;
       padding-top: 12px;
+    }
+  }
+
+  &--center {
+    margin: 0 auto;
+
+    @include desktop {
+      margin-left: 1px;
+      width: 230px;
+    }
+  }
+
+  &--grid {
+    @include tablet {
+      align-self: flex-start;
+      padding: 14px 26px;
+      width: 175px;
+      grid-area: btn;
+      margin-top: 20px;
+    }
+
+    @include desktop {
+      margin-top: 26px;
+      margin-left: 53px;
     }
   }
 

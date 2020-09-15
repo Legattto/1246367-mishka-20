@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet">
-
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>Вязяние на заказ</title>
 </head>
-
 <body>
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
@@ -33,29 +32,29 @@
       <nav class="page-header__nav main-nav js-nav">
         <ul class="main-nav__main-list">
           <li class="main-nav__main-item">
-            <a href="catalog.html" aria-label="Переход в каталог товаров">
+            <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
           <li class="main-nav__main-item">
-            <a href="form.html" aria-label="Переход на форму заказа">
-              Вязяние на заказ
+            <a href="form.html">
+              Вязание на заказ
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход на страницу новых товаров">
+            <a href="#">
               Новые поступления
             </a>
           </li>
           <li class="main-nav__main-item main-nav__main-item--desktop">
-            <a href="#" aria-label="Переход в страницу распродажи">
+            <a href="#">
               Распродажа
             </a>
           </li>
         </ul>
         <ul class="main-nav__help-list">
           <li class="main-nav__help-item main-nav__help-item--search">
-            <a href="#" aria-label="Переход на страницу поиска">
+            <a href="#">
               <span class="main-nav__help-item-span">Поиск по сайту</span>
             </a>
             <svg class="main-nav__help-item-search" width="17" height="17">
@@ -63,7 +62,7 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--cart">
-            <a class="main-nav__help-item-cart" href="#" aria-label="Переход в корзину">
+            <a class="main-nav__help-item-cart" href="#">
               <span>Корзина: пока пуста</span>
             </a>
             <svg width="20" height="18">
@@ -71,30 +70,26 @@
             </svg>
           </li>
           <li class="main-nav__help-item main-nav__help-item--tablet">
-            <span class="main-nav_delivery-info">
+            <a class="main-nav__delivery-info">
               Бесплатная доставка по России
-            </span>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main class="page-main">
     <h1 class="heading heading--big heading--bg heading--bg-from">
       Вязание на заказ
     </h1>
-
     <section class="page-form">
       <div class="container">
         <h2 class="visually-hidden">
           Форма для заказа
         </h2>
         <p class="page-form__text">
-          Мы будем рады воплотить в жизнь
-          ваши пожилания! Заполните простую
-          форму заказа и мы свяжемся с вами,
-          чтобы уточнить детали.
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+          уточнить детали.
         </p>
       </div>
       <form class="page-form__send form-order" action="https://echo.htmlacademy.ru" method="POST">
@@ -109,7 +104,7 @@
                   checked>
                 <label for="interier" class="form-order__list-label form-order__list-label--radio"
                   aria-label="Тип товара">
-                  Акксесуар для интрьера
+                  Аксессуар для интерьера
                 </label>
               </li>
               <li class="form-order__list-item form-order__list-item--radio">
@@ -179,13 +174,14 @@
                 </label>
               </li>
               <li class="form-order__list-item form-order__list-item--text">
-                <label class="form-order__list-label form-order__list-label--text" aria-label="Введите вашу фамилию">
+                <label class="form-order__list-label form-order__list-label--text form-order__list-label--text-pad"
+                  aria-label="Введите вашу фамилию">
                   <span class="form-order__list-item-span">Фамилия:</span>
                   <input type="text" name="Фамилия" placeholder="Укажите фамилию*" required>
                 </label>
               </li>
               <li class="form-order__list-item form-order__list-item--text">
-                <label class="form-order__list-label form-order__list-label--text"
+                <label class="form-order__list-label form-order__list-label--text form-order__list-label--text-pad"
                   aria-label="Введите ваше отчество, если желаете">
                   <span class="form-order__list-item-span">Отчество:</span>
                   <input type="text" name="Отчество" placeholder="Отчество, если желаете">
@@ -200,7 +196,8 @@
               Тел
             </span>
             <label class="form-order__list-label form-order__list-label--text form-order__list-label--background
-              form-order__list-label--right-side" aria-label="Введите ваш номер телефона">
+              form-order__list-label--right-side form-order__list-label--phone-mail" aria-label="Введите ваш номер
+              телефона">
               <input type="tel" name="Телефон" required placeholder="+7 XXX XXX XX XX*">
               <svg class="form-order__list-label-svg form-order__list-label-svg--phone" width="24" height="24">
                 <use xlink:href="#icon-phone"></use>
@@ -211,9 +208,8 @@
             <span class="form-order__options form-order__options--line form-order__options--email">
               E-MAIL
             </span>
-            <label
-              class="form-order__list-label form-order__list-label--text form-order__list-label--background form-order__list-label--right-side"
-              aria-label="Введите ваш Email">
+            <label class="form-order__list-label form-order__list-label--text form-order__list-label--background
+              form-order__list-label--right-side form-order__list-label--phone-mail" aria-label="Введите ваш Email">
               <input type="email" name="e-mail" required placeholder="Ваш Email*">
               <svg class="form-order__list-label-svg form-order__list-label-svg--email" width="32" height="32">
                 <use xlink:href="#icon-mail"></use>
@@ -227,7 +223,7 @@
               Доп
             </span>
             <label class="form-order__list-label" aria-label="Опишите все ваши пожилания к заказу">
-              <textarea placeholder="Опишите все ваши пожилания к заказу"></textarea>
+              <textarea placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </label>
           </div>
           <div class="form-order__downbox">
@@ -242,7 +238,6 @@
       </form>
     </section>
   </main>
-
   <footer class="page-footer page-footer--form">
     <div class="page-footer__flex container">
       <a href="index.html" class="page-footer__logo">
@@ -274,20 +269,18 @@
         </li>
       </ul>
       <div class="page-footer__wrapper">
-        <span class="page-footer__autor">
+        <span class="page-footer__author">
           Разработано
         </span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__autor-link"
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__author-link"
           aria-label="Логотип HTML academy">
-          <svg width="27" height="35">
+          <svg class="page-footer__author-svg" width="27" height="35">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
-
   <script src="js/index.min.js"></script>
 </body>
-
 </html>
