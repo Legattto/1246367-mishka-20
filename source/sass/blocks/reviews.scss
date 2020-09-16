@@ -4,7 +4,7 @@
 
   @include tablet {
     display: flex;
-    padding-top: 60px;
+    padding-top: 62px;
     max-width: 768px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -76,8 +76,8 @@
 
   @include desktop {
     max-width: 875px;
-    margin-top: -7px;
-    margin-bottom: 42px;
+    margin-top: -36px;
+    margin-bottom: 44px;
   }
 }
 
@@ -105,6 +105,10 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .reviews__btn {
